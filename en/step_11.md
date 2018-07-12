@@ -56,7 +56,7 @@ That's all the basic pieces of the game!
 
 ## Challenge: Make a maze for the robot
 
-Now, this is called "MazeRobo", so there should probably be a Maze... 
+Now, this is called "MazeRobo", so there should probably be a maze... 
 
 + You've got one wall, so add some more cubes, play with the **Position** and **Scale** of them and build a few walls! 
 

@@ -33,21 +33,21 @@ This lets you build complex objects \(like a game character!\) from simple ones 
 
 + Do the same for "Nose", setting them like this:
 
-   X: 0
-   Y: 0.5
-   Z: 0.5
+    X: 0
+    Y: 0.5
+    Z: 0.5
 
 + It doesn't quite look like anything yet, does it? Staying in the **Inspector** look at the **scale** controls. They control the shape of the object. Set "Shades" **scale** to these values:
 
-   X: 0.64
-   Y: 0.16
-   Z: 0.16
+    X: 0.64
+    Y: 0.16
+    Z: 0.16
 
 + Now set "Nose" **scale** to:
 
-   X: 0.16
-   Y: 0.16
-   Z: 0.16
+    X: 0.16
+    Y: 0.16
+    Z: 0.16
 
 That's starting to look like a robot! Time to add some colour!
 

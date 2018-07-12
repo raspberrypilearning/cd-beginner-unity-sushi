@@ -10,7 +10,7 @@ rb.MoveRotation (Quaternion.LookRotation (desiredDirection, Vector3.up));
 
 + This line makes MazeRobo look where it's going! Run the game and check it out!
 
-MazeRobo does look where it's going, but as soon as you release the controls it springs back to looking in the original direction. You can fix this too! The problem is that direction is essentially 0 and when there's no active input from the player, the input is 0. You need to set it up so that MazeRobo will only turn based on active player input. The check you'll use for this in the code is: **if** the player's input is bigger than a very small number \(0.01\) **then** move and turn. So nothing will happen on that default 0.
+MazeRobo does look where it's going, but as soon as you release the controls it springs back to looking in the original direction. You can fix this too! The problem is that direction is essentially `0` and when there's no active input from the player, the input is `0`. You need to set it up so that MazeRobo will only turn based on active player input. The check you'll use for this in the code is: **if** the player's input is bigger than a very small number \(`0.01`\) **then** move and turn. So nothing will happen on that default `0`.
 
 + The first thing you'll need to do is wrap all your existing direction change code in an **if** statement, which only runs the code inside it if the condition in the brackets is **true**.
 
@@ -39,7 +39,7 @@ Right now, you're forcing the statement to be **true** by actually passing it `t
 
 + Run the game and check it's all still working.
 
-Now you need to create your test conditions. When you tell MazeRobo to go forward Unity sees that as a positive number \(e.g. 1\) and when you tell it to go backwards, it sees that as a negative number \(e.g. -1\). You just want to test for the **size** of the number, so you'll need to get the **absolute value** of the number. The **absolute value** is the value of the number without the sign and is always a positive number, or zero.
+Now you need to create your test conditions. When you tell MazeRobo to go forward Unity sees that as a positive number \(e.g. `1`\) and when you tell it to go backwards, it sees that as a negative number \(e.g. `-1`\). You just want to test for the **size** of the number, so you'll need to get the **absolute value** of the number. The **absolute value** is the value of the number without the sign and is always a positive number, or zero.
 
 + Above the `if` statement in your code, you'll need to collect the inputs from the user and get their **absolute values** like this:
 
@@ -52,7 +52,7 @@ Now you need to create your test conditions. When you tell MazeRobo to go forwar
     if (true) {
 ```
    
-Now it's time to update the test so it actually works! You'll need to change what's in the brackets on your `if` so as it checks **if** `inputHorizontal` is **greater** than 0.01 **or** **if** `inputVertical` is **greater** than 0.01 and gives a **true** result in either case. 
+Now it's time to update the test so it actually works! You'll need to change what's in the brackets on your `if` so as it checks **if** `inputHorizontal` is **greater** than `0.01` **or** **if** `inputVertical` is **greater** than `0.01` and gives a **true** result in either case. 
 
 To do this, you'll need to use an **or** between your conditions. In C\# \(the language you're writing your scripts in\) we represent **or** with two pipe characters, like this: `conditionA || conditionB`. There are also other ways of joining two or more conditions, for example the **and** operator \(`&&`\) and you can look those up online if you need them.  
 

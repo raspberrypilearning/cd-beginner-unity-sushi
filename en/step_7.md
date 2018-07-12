@@ -56,7 +56,7 @@ Finally, you have the curly braces `{}`. Everything inside them is the set of in
 * Boil water
 * Put water in teapot
 * Add teabag
-* and so on
+* ... and so on
 
 --- /collapse ---
 
@@ -130,11 +130,11 @@ That should do it! You're close to getting MazeRobo moving now!
 
 + Back in Unity, drag and drop your RoboMover script from the scripts folder and onto the MazeRobo gameobject in the Hierarchy. You can see that script is now present in MazeRobo’s inspector, under the Rigidbody.  
 
-![](/images/MazeRobo_Inspector.png)
+![](images/MazeRobo_Inspector.png)
 
 + There are two empty fields in the RoboMover script—`rb` and `tf`. These stand for Rigidbody and Transform and if you click-and-drag the names of these components from their places in the Inspector and into their respective fields, RoboMover \(the script\) will have all the info it needs to move MazeRobo! 
 
-![](/images/Script_Vars.png)
+![](images/Script_Vars.png)
 
 + Get back into Unity and click on the big ‘Play’ button on the top centre of the Unity interface... **MazeRobo moves!**
 

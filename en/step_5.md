@@ -6,7 +6,7 @@
 
 + You can set the colour of a material by changing its **albedo** value in the **inspector**. Click on the rectangle next to the dropper icon and a colour picker should open.
 
-![](/images/colour_picker.png)
+![](images/colour_picker.png)
 
 + Make EyeBlack’s albedo value black and NoseRed’s albedo value red.
 

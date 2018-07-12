@@ -4,7 +4,7 @@ By following these cards you're going to build a simple video game and learn the
 
 + Start Unity and choose **New** to create a new project
 
-![](/images/New_Unity.png)
+![](images/New_Unity.png)
 
 + When asked for a name for the project, call it "Beginner Unity Sushi" so it'll be easy to find later!
 
