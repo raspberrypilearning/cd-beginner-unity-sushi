@@ -1,6 +1,6 @@
 ## Setting the Stage
 
-By following these cards you're going to build a simple video game and learn the tools you can use to make that game bigger and more awesome! You need to do a little setup now, before you get started making your game.
+Before you get started making your game, You need to do a little setup.
 
 + Start Unity and choose **New** to create a new project
 
@@ -12,6 +12,27 @@ By following these cards you're going to build a simple video game and learn the
 
 + In the top-right corner of the Unity window you'll see a menu called "Layout". Click on it and pick "Default".
 
-+ Now go to the menu bar (at the top of the screen if you're on a Mac, or at the top of the Unity window on a PC) and choose the "Assets" menu near the left. Go to **Create > Folder**, which means pick the "Create" option and then the "Folder" option in the menu that opens underneath. You'll be asked for a name for your new folder. Call it "Scenes".
+  ![The Unity screen with the Layout menu at the top right](images/step3_layout.png)
 
-+ You already have a scene, the game started with one. You just need to save it (**File > Save Scene as...**). You'll need to give the scene a name. Call it "MazeRoboBegins" and put it in the "Scenes" folder you just created (it's inside the "Assets" folder).
++ Look at the panel named **Assets**. You should see a folder there called "Scenes". 
+
+  ![The Scenes folder in Assets](images/step3_scenes.png)
+
+--- collapse ---
+---
+title: There is no "Scenes" folder
+---
+
+If there is no folder named "Scenes", you can create it.
+
++ Go to the menu bar (at the top of the screen if you're on a Mac, or at the top of the Unity window on a PC) and choose the "Assets" menu near the left.
+
++ Select **Create > Folder**, which means pick the "Create" option and then the "Folder" option in the menu that opens underneath.
+
++ You'll be asked for a name for your new folder. Call it `Scenes`.
+
+--- /collapse ---
+
+The next thing you need is a scene. In fact, you already have this because the game started with one. You just need to save it.
+
++ Go to the top menu and choose **File > Save Scene as...**. You'll need to give the scene a name and choose a location to save it in. Call it `MazeRoboBegins` and save it in the "Scenes" folder (it's inside the "Assets" folder).

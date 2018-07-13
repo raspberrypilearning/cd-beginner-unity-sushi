@@ -60,6 +60,6 @@ These track the position of the camera (`tf`), the position of the player/MazeRo
 
 + You need to attach the script to the camera now, so go back to Unity and select the "Main Camera" in the **Hierarchy**. Then drag the script from the **Project** space onto the "Main Camera".
 
-+ Find the "Camera Mover (Script)" in the **Inspector** and drag the "Main Camera" from the **Hierarchy** onto the "Tf" field. Then drag "MazeRoboBody" from the **Hierarchy** onto the "Player Transform" field.
++ Find the "Camera Mover (Script)" in the **Inspector** and drag the "Main Camera" from the **Hierarchy** onto the "Tf" field. Then drag "MazeRobo" from the **Hierarchy** onto the "Player Transform" field.
 
 + Now run the game and watch the camera follow you around! 

@@ -2,7 +2,7 @@
 
 ### Hardware
 
-+ List hardware here, or delete section.
++ A computer capable of running Unity. The computer will need to be running either Windows or Mac OS.
 
 ### Software
 
@@ -19,8 +19,7 @@ title: How to get Unity
 
 + Wait for the the download and installation steps to complete.
 
++ Once installed, you will need to create an account or sign in to use Unity. This is so that you can access the free version which is for personal use.
+
 --- /collapse ---
 
-### Additional Resources
-
-+ List additional resources, or delete section.
