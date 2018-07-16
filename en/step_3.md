@@ -36,3 +36,15 @@ If there is no folder named "Scenes", you can create it.
 The next thing you need is a scene. In fact, you already have this because the game started with one. You just need to save it.
 
 + Go to the top menu and choose **File > Save Scene as...**. You'll need to give the scene a name and choose a location to save it in. Call it `MazeRoboBegins` and save it in the "Scenes" folder (it's inside the "Assets" folder).
+
+--- collapse ---
+---
+title: Saving your work
+---
+
++ Remember to save regularly as you go along, so that you don't accidentally lose all your hard work!
+
++ To save, click **File > Save Scenes**, or press the `Ctrl` (`Cmd` on a Mac!) and `S` keys together.
+
+
+--- /collapse ---

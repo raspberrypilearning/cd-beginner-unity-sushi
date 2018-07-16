@@ -2,8 +2,10 @@
 
 MazeRobo moves, but the camera always stays in the same place. That's going to be a problem if you try to add anything outside of the camera's initial field of vision, or anything that moves outside it (like MazeRobo itself!). You can fix it though!
 
-+ Select the **main camera** and set the **transform** properties in the **inspector** as follows:
-    
++ Select the **main camera** in the Hierarchy and set the **transform** properties in the **inspector** as follows:
+
+  ![Select MainCamera in the Hierarchy](images/step9_SelectMainCamera.png)
+
   ### Position
   X: 0
   Y: 9
@@ -18,10 +20,14 @@ MazeRobo moves, but the camera always stays in the same place. That's going to b
   X: 1
   Y: 1
   Z: 1
-        
+
+![Setting the transform values for the main camera](images/step9_MainCameraTransform.png)
+
 Now you've changed the camera's angle (run the game to test it if you like!) but it still doesn't follow MazeRobo. 
 
-+ To make that happen you'll have to update the camera's location every frame and to make that happen, you'll need another **script**. Create one (**Assets > Create > C# Script**) and call it `CameraMover`. Put it in the "Scripts" folder.
+To make that happen you'll have to update the camera's location every frame and to make that happen, you'll need another **script**.
+
++ Create a new script (**Assets > Create > C# Script**) and call it `CameraMover`. Put it in the "Scripts" folder.
 
 + At the start of the script, just inside the "CameraMover" class, add three **variables** like so:
 
@@ -62,4 +68,8 @@ These track the position of the camera (`tf`), the position of the player/MazeRo
 
 + Find the "Camera Mover (Script)" in the **Inspector** and drag the "Main Camera" from the **Hierarchy** onto the "Tf" field. Then drag "MazeRobo" from the **Hierarchy** onto the "Player Transform" field.
 
+![Drag the objects from the Hierarchy onto the script](images/step9_dragFromHierarchyOntoScript.png)
+
 + Now run the game and watch the camera follow you around! 
+
+![The new camera angle in action](images/step9_CameraFollowing.png)

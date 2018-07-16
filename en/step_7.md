@@ -1,10 +1,14 @@
 ## Making MazeRobo move
 
-+ Create a new folder \(**Assets &gt; Create &gt; Folder**\) inside the Project Pane "Assets" folder \(you make need to click on this in the **projects** section first\), and call it "Scripts".  
-   
-+ Create a new C\# script \(**Assets &gt; Create &gt;  C\# Script**\) in this folder and call it "RoboMover".
++ Create a new folder \(**Assets &gt; Create &gt; Folder**\) inside the Project Pane "Assets" folder \(you may need to click on the "Assets" folder first in the **projects** section\), and call it `Scripts`.  
 
-+ Double-click on "RoboMover" to open it in your editor. In the editor. You should see code like this:
+![](images/step7_ScriptsFolder.png)
+   
++ Create a new C\# script \(**Assets &gt; Create &gt;  C\# Script**\) in this folder and call it `RoboMover`.
+
+![The RoboMover script inside the Scripts folder](images/step7_NewScript.png)
+
++ Double-click on "RoboMover" to open it in your editor (which is a separate program from Unity). You should see code like this:
 
 ```cs
 using System.Collections;
@@ -126,17 +130,24 @@ What all this adds up to is moving the character a tiny bit in the direction the
 
 --- /collapse ---
 
++ Be sure to save your code (**File > Save**).
+
 That should do it! You're close to getting MazeRobo moving now!
 
-+ Back in Unity, drag and drop your RoboMover script from the scripts folder and onto the MazeRobo gameobject in the Hierarchy. You can see that script is now present in MazeRobo’s inspector, under the Rigidbody.  
++ Back in Unity, drag and drop your RoboMover script from the scripts folder and onto the MazeRobo gameobject in the Hierarchy.
 
-![](images/MazeRobo_Inspector.png)
+![Drag the script onto MazeRobo](images/step7_dragScript.png)
+
++ You can see that script is now present in MazeRobo’s inspector, under the Rigidbody.  
+
+![The script appears in the inspector for MazeRobo](images/MazeRobo_Inspector.png)
 
 + There are two empty fields in the RoboMover script—`rb` and `tf`. These stand for Rigidbody and Transform and if you click-and-drag the names of these components from their places in the Inspector and into their respective fields, RoboMover \(the script\) will have all the info it needs to move MazeRobo! 
 
-![](images/Script_Vars.png)
+![Drag the names onto the script](images/step7_DragOntoScript.png)
+![The Rb and Tf variables now have the values of Rigidbody and Transform](images/Script_Vars.png)
 
-+ Get back into Unity and click on the big ‘Play’ button on the top centre of the Unity interface... **MazeRobo moves!**
++ Now click on the big ‘Play’ button on the top centre of the Unity interface... **MazeRobo moves!** Use the arrow keys to control MazeRobo. When you're done, press the play button again to stop the game play.
 
 
 
