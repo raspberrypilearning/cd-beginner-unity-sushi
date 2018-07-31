@@ -1,4 +1,4 @@
-## Making a robot
+## Make a robot
 
 Time to create your first object!
 
