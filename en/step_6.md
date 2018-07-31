@@ -4,7 +4,7 @@ Now you're going to create a ground plane for MazeRobo to move about on!
 
 + Start by adding a **Quad** object to be the ground (**GameObject > 3D Object > Quad**). Change the name of this object from `Quad` to `Ground` in the Inspector.
  
-+ In the Inspector for this new object under **transform**, set the **X** **rotation** to `90`. In the **transform**'s **scale** section, enter these values:
++ In the Inspector for this new object under **Transform**, set the **X Rotation** to `90`, and for **Scale**, enter these values:
 ```
   X = 40.96
   Y = 40.96
@@ -15,7 +15,7 @@ Now you're going to create a ground plane for MazeRobo to move about on!
 
 Gah! MazeRobo’s stuck halfway into the ground! Let's move her up by one meter.
 
-+ Select MazeRobo and, in the Inspector under **transform**, set the following **position** coordinates: 
++ Select MazeRobo and, in the Inspector under **Transform**, set the following **Position** coordinates: 
 ```
   X = 0
   Y = 1
@@ -25,13 +25,13 @@ Gah! MazeRobo’s stuck halfway into the ground! Let's move her up by one meter.
  
 Now you’ll add a wall to start your maze!
 
-+ Create a Cube (**GameObject > 3D Object > Cube**) and set its **transform position** to:
++ Create a Cube (**GameObject > 3D Object > Cube**) and set its **Transform Position** to:
 ```
   X = -2
   Y = 1.5
   Z = 0 
 ```
-+ Set the Y **scale** to `3` and rename the object to `Wall`.
++ Set the Y **Scale** to `3` and rename the object to `Wall`.
  
 + Now make a new material for `Wall` (**Assets > Create > Materials**), rename it `WallBlue`, and give it a (surprise!) blue colour.
 
