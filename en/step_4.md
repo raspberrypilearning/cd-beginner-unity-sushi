@@ -41,35 +41,35 @@ Putting objects 'inside' other objects lets you build up complex objects \(like 
 + Now select the `Shades` object and look at the Inspector's **Transform** section. You will see a set of three **coordinates**  \(X, Y, Z\) that control the object's **position**.
 
 + Try changing each of their values to see which direction they control. Try putting a `-` in front of some of the numbers too! Finally, set them to these values:
-
-   X: 0
-   Y: 0.64
-   Z: 0.42
-
+```
+   X = 0
+   Y = 0.64
+   Z = 0.42
+```
   ![Changing the position coordinates](images/step4_TransformPosition.png)
 
 + Do the same for `Nose`, setting them like this:
-
-    X: 0
-    Y: 0.5
-    Z: 0.5
-
+```
+    X = 0
+    Y = 0.5
+    Z = 0.5
+```
 This doesn't quite look like anything yet, does it? To make MazeRobo look like a robot, you'll adjust what `Shades` and `Nose` look like. You can control the shape of objects with the **scale** controls.
 
 + Staying in the **Inspector**, look at the scale controls for `Shades`. Set its scale to these values:
-
-    X: 0.64
-    Y: 0.16
-    Z: 0.16
-
+```
+    X = 0.64
+    Y = 0.16
+    Z = 0.16
+```
   ![Changing the scale values](images/step4_TransformScale.png)
 
 + Now set the `Nose` scale to:
-
-    X: 0.16
-    Y: 0.16
-    Z: 0.16
-
+```
+    X = 0.16
+    Y = 0.16
+    Z = 0.16
+```
 Now it's starting to look like a robot!
 
   ![The robot character](images/step4_robot.png)
