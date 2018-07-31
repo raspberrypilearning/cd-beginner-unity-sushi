@@ -11,8 +11,8 @@ You’re going to build a simple video game and learn the tools you can use to m
 ### What you will learn
 
 + How to create 3D objects
-+ How to change the colour, shape and position of objects
-+ Adjusting the camera angle to follow a player in the game
++ How to change the colour, shape, and position of objects
++ How to adjust the camera angle to follow a player in the game
 + How to add a script to an object and write code to control movement and behaviour
 
 ### Additional information for educators
