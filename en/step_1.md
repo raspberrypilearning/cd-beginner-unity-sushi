@@ -4,7 +4,7 @@ In this project you'll make your first game with Unity, a professional game deve
 
 ### What you will make
 
-You’re going to build a simple video game and learn the tools you can use to make that game bigger and more awesome! 
+You’re going to build a simple video game where a robot moves around a maze, and you'll learn the tools you can use to make that game bigger and more awesome! 
 
 ![A game where the robot must get the ball into the yellow zone](images/step1_gameScreenshot.png)
 
