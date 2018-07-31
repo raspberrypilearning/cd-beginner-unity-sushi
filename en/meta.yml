@@ -11,7 +11,7 @@ steps:
   - title: Set the stage
   - title: Make a robot
   - title: Add colour
-  - title: Making the ground
+  - title: "Make the world's ground"
   - title: Make MazeRobo move
   - title: Moving properly
   - title: Camera tracking
