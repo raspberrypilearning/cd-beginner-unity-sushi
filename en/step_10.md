@@ -10,7 +10,7 @@ Now that you've got your character and it's moving around properly, it's time to
   Y: 1
   Z: 2
 ``` 
-+ Make another material (see the **Adding colour** step if you don't remember how!) and make it green. Call it `BallGreen` and drag it onto `Ball`!
++ Make another material (see the **Add colour** step if you don't remember how!) and make it green. Call it `BallGreen` and drag it onto `Ball`!
 
 ![The sphere and the green material](images/step10_AddGreenBall.png)
 
