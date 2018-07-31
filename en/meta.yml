@@ -8,11 +8,11 @@ last_tested: "2018-07-12"
 steps:
   - title: Introduction
   - title: What you will need
-  - title: Setting the Stage
-  - title: Making a Robot
-  - title: Adding Colour
+  - title: Set the stage
+  - title: Make a robot
+  - title: Add colour
   - title: Making the ground
-  - title: Making MazeRobo move
+  - title: Make MazeRobo move
   - title: Moving properly
   - title: Camera tracking
   - title: Give MazeRobo something to play with
