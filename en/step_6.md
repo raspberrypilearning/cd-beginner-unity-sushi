@@ -1,4 +1,4 @@
-## Making the ground
+## Make the world's ground
 
 Now you're going to create a ground plane for MazeRobo to move about on!
 
@@ -35,7 +35,7 @@ Now you’ll add a wall to start your maze!
  
 + Now make a new material for `Wall` (**Assets > Create > Materials**), rename it `WallBlue`, and give it a (surprise!) blue colour.
 
-+ Assign the `WallBlue` material to "Wall" using the **MeshRender > Materials** section of the Inspector (you can also drag the colour straight onto the object).
++ Assign the `WallBlue` material to `Wall` using the **MeshRender > Materials** section of the Inspector (you can also drag the material straight onto the object).
 
 Later on, you’ll turn this wall into a maze for MazeRobo to explore!
 
