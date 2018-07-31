@@ -74,4 +74,4 @@ Now it's starting to look like a robot!
 
   ![The robot character](images/step4_robot.png)
   
-On the next card, it's time to add some colour!
+In the next step, it's time to add some colour!
