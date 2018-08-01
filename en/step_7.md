@@ -1,4 +1,4 @@
-## Making MazeRobo move
+## Make MazeRobo move
 
 Time to write some code so that the player of your game can control MazeRobo!
 
