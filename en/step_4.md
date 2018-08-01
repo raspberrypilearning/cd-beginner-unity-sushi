@@ -40,7 +40,7 @@ Putting objects 'inside' other objects lets you build up complex objects \(like 
 
 + Now select the `Shades` object and look at the Inspector's **Transform** section. You will see a set of three **coordinates**  \(X, Y, Z\) that control the object's **Position**.
 
-+ Try changing each of their values to see which direction they control. Try putting a `-` in front of some of the numbers too! Finally, set them to these values:
++ Try changing each of the coordinates' value to see which direction they control. Try putting a `-` in front of some of the numbers too! Finally, set them to these values:
 ```
    X = 0
    Y = 0.64
