@@ -19,7 +19,7 @@ MazeRobo does look where it's going, but as soon as you release the controls it 
 title: Why does the robot spring back to facing the other way?
 ---
 
-The problem is that Unity understands MazeRobo's original direction as the default value `0`, and so when there's no active input from the player, the input is `0`.
+The problem is that Unity understands MazeRobo's original direction as the default value `0`, and so when there's no active input from the player, the input is `0`, so that's where to robot faces.
 
 You need to make it so that MazeRobo will only turn based on active player input.
 
@@ -56,7 +56,7 @@ Right now, you're forcing the `if` statement to be **true** by actually passing 
 
 Now you need to create your test conditions.
 
-+ Above the `if` statement but still inside the `Update` function, you'll need to collect the inputs from the user and get their **absolute** values like this:
++ Above the `if` statement but still inside the `Update` function, you'll need to collect the player inputs and get their **absolute** values like this:
 
 ```cs
     void Update () {
@@ -76,13 +76,13 @@ When you tell MazeRobo to go forward, Unity sees that as a positive number \(e.g
 
 You just want to test for the **size** of the number, regardless of its sign, which is why you're using the absolute value of the number.
 
-The **absolute value** is the value of the number without the sign and it's always a positive number or zero.
+The **absolute value** is the value of the number without the sign, so it's always a positive number or zero.
 
 --- /collapse ---
  
-Now it's time to update the `if` statement so it actually tests something! You'll need to change what's in the brackets after  the`if` so that it checks if `inputHorizontal` is **greater** than `0.01` **or** if `inputVertical` is **greater** than `0.01` and gives a **true** result in either case. 
+Now it's time to update the `if` statement so it actually tests something! You'll need to change what's in the brackets after  the `if` so that it checks if `inputHorizontal` is **greater** than `0.01` **or** if `inputVertical` is **greater** than `0.01`, and gives a `true` result in either case. 
 
-To do this, you'll need to use an 'or' between your conditions that your computer can understand. In C\# \(the language you're writing your Unity scripts in\) we represent 'or' with two pipe characters, like this: `conditionA || conditionB`. There are also other ways of joining two or more conditions, for example the 'and' operator \(`&&`\), and you can look those up online if you need them.  
+To do this, you'll need to use an 'or' between your conditions that your computer can understand. In C\# \(the language you're writing your Unity scripts in\) we represent 'or' with two pipe characters, like this: `condition A || condition B`. There are also other ways of joining two or more conditions, for example the 'and' operator \(`&&`\), and you can look those up online if you need them.  
 
 + To write the 'or' condition you need, just update your `if` statement like this:
 
@@ -90,7 +90,7 @@ To do this, you'll need to use an 'or' between your conditions that your compute
   if (inputHorizontal > 0.01f || inputVertical > 0.01f) {
 ```
 
-Now MazeRobo should stay facing the direction it's just moved in! If you're having any problems, check that your `Update` function matches this:
+Now MazeRobo should stay facing the direction it's just moved in! If you're having any problems, check that your `Update` function matches this code:
 
 ```cs
 void Update () {
