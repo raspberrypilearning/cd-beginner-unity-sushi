@@ -4,11 +4,11 @@ You've got a robot, you've got a ball... now in order for it to be a game, there
 
 + First, add another cube and call it `WinZone`. Maybe give it a new, noticeable colour (yellow? orange? pink?).
 
-+ Make sure you have `WinZone` selected in the Hierarchy, and then in the Inspector, under **Box Collider** check the **Is Trigger** option.
++ Make sure you have `WinZone` selected in the Hierarchy, and in the Inspector under **Box Collider**, select the **Is Trigger** option.
 
 ![The Is Trigger checkbox has been ticked](images/step11_BoxColliderTrigger.png)
 
-+ Set the **Transform** property of `WinZone` so that it is:
++ Set the **Transform Position** property of `WinZone` so that it is:
   ```
   X: -5
   Y: 1
@@ -43,7 +43,7 @@ While you're at it, why not add some celebration to let the player know when the
 
 Now you'll add code to make the fireworks appear when it's the right time!
 
-+ Create a C# script (in the `Scripts` folder) called `WinZone`. Open it and remove the `Start` and `Update` functions. Put this code inside it instead:
++ Create a C# script (in the `Scripts` folder) called `WinZone`. Open the new script and remove the `Start` and `Update` functions. Put this code inside it instead:
 
 ```cs
 public GameObject fireworks;
@@ -60,7 +60,7 @@ void OnTriggerEnter (Collider col) {
 title: What does the new code do?
 ---  
 
-What's happening here is that a GameObject called `fireworks` is created (you'll connect it to your `Fireworks` in a moment) and the script then waits for any **Rigidbody** to touch the **Collider** it's attached to (whichever one you drag the script onto — in this case it'll be `WinZone`).
+What's happening here is that a GameObject called `fireworks` is created (you'll connect it to your `Fireworks` in a moment), and the script then waits for any **Rigidbody** to touch the **Collider** object it's attached to (whichever one you drag the script onto — in this case it'll be `WinZone`).
 
 The **Rigidbody** that collided with it will automatically be assigned to the **Collider** variable `col`. If that **Rigidbody** happens to have the tag 'Ball', then the `fireworks` object will be made to appear.
 
