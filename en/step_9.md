@@ -1,6 +1,6 @@
 ## Camera tracking
 
-MazeRobo moves, but the camera always stays in the same place. That's going to be a problem if you try to add anything outside of the camera's initial field of vision, or anything that moves outside it (like MazeRobo itself!). Let's make it adjust!
+MazeRobo moves, but right now the camera always stays in the same place. That's going to be a problem if you try to add anything outside of the camera's initial field of vision, or anything that moves outside it (like MazeRobo itself!). Let's make it adjust!
 
 + Select the **Main Camera** in the Hierarchy and set its **Transform** properties in the Inspector as follows:
 
@@ -28,7 +28,7 @@ MazeRobo moves, but the camera always stays in the same place. That's going to b
 
 Now you've changed the camera's angle (run the game to test it if you like!), but it still doesn't follow MazeRobo. 
 
-To make that happen, you'll have to update the camera's location every frame and for that, you'll need another script.
+To make that happen, you'll have to update the camera's location every frame, and for that, you'll need another script!
 
 + Create a new script (**Assets > Create > C# Script**) and call it `CameraMover`. Put it in the `Scripts` folder.
 
@@ -47,7 +47,10 @@ To make that happen, you'll have to update the camera's location every frame and
 title: What does the new code do?
 ---
 
-These lines of code track the position of the camera (`tf`), the position of MazeRobo (`playerTransform`), and the distance, in (x, y, z), from MazeRobo to the camera (`distanceBetweenPlayerAndCam`).  
+These lines of code track:
++ The position of the camera (`tf`)
++ The position of MazeRobo (`playerTransform`)
++ The distance, in (X, Y, Z), from MazeRobo to the camera (`distanceBetweenPlayerAndCam`)
 
 --- /collapse ---
 
@@ -69,7 +72,7 @@ These lines of code track the position of the camera (`tf`), the position of Maz
 
 + You need to attach the script to the camera now, so go back to Unity and select the Main Camera in the Hierarchy. Then drag the `CameraMover` script from the Project space onto the Main Camera.
 
-+ Find the CameraMover field in the Inspector, and drag the Main Camera from the Hierarchy into the **Tf** field. Then drag MazeRobo from the Hierarchy into the **Player Transform** field.
++ Find the **CameraMover** field in the Inspector, and drag the Main Camera from the Hierarchy into the **Tf** field. Then drag MazeRobo from the Hierarchy into the **Player Transform** field.
 
 ![Drag the objects from the Hierarchy onto the script](images/step9_dragFromHierarchyOntoScript.png)
 
