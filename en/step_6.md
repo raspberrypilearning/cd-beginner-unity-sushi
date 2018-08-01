@@ -33,7 +33,7 @@ Now you’ll add a wall to start your maze!
 ```
 + Set the Y **Scale** to `3` and rename the object to `Wall`.
  
-+ Now make a new material for `Wall` (**Assets > Create > Materials**), rename it `WallBlue`, and give it a (surprise!) blue colour.
++ Now make a new material for `Wall` (**Assets > Create > Materials**), rename it `WallBlue`, and change its albedo to give it a (surprise!) blue colour.
 
 + Assign the `WallBlue` material to `Wall` using the **MeshRender > Materials** section of the Inspector (you can also drag the material straight onto the object).
 
