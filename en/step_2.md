@@ -17,7 +17,7 @@ title: How to get Unity
 
 + Run the installer program once it's downloaded, and follow the on-screen instructions, accepting all the default options.
 
-+ Wait for the the download and installation steps to complete.
++ Wait for the download and installation steps to complete.
 
 + Once the Unity software is installed, you will need to create an account (or sign in if you already have one). This is so that you can access the free version, which is for personal use.
 
