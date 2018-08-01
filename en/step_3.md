@@ -25,7 +25,7 @@ title: There is no Scenes folder
 
 If there is no folder named `Scenes`, you can create it.
 
-+ Go to the menu bar (at the top of the screen if you're on a Mac, or at the top of the Unity window on a Windows PC) and choose the **Assets** menu near the left.
++ Go to the menu bar (on a Mac it's at the top of the screen, on a Windows PC it's at the top of the Unity window) and choose the **Assets** menu toward the left.
 
 + Select **Create > Folder**, which means pick the **Create** option and then the **Folder** option in the menu that opens below.
 
@@ -33,7 +33,7 @@ If there is no folder named `Scenes`, you can create it.
 
 --- /collapse ---
 
-The next thing you need is a scene. In fact, you already have one because the game started with one, so you just need to save it.
+The next thing you need is a scene. It turns our you already have one, because the Unity project started with one, so you just need to save it.
 
 + Go to the top menu and choose **File > Save Scene as...**. You'll need to give the scene a name and choose a location to save it in. Call it `MazeRoboBegins` and save it in the `Scenes` folder that's inside the `Assets` folder.
 
@@ -44,7 +44,7 @@ title: Saving your work
 
 + Remember to save regularly as you go along, so that you don't accidentally lose all your hard work!
 
-+ To save, click **File > Save Scenes**, or press the <kbd>Ctrl</kbd> (<kbd>Cmd</kbd> on a Mac!) and <kbd>S</kbd> keys together.
++ To save, click **File > Save Scenes**, or press the <kbd>Ctrl</kbd> (<kbd>cmd</kbd> on a Mac!) and <kbd>s</kbd> keys together.
 
 
 --- /collapse ---
