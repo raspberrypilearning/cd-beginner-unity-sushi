@@ -4,7 +4,7 @@ Now that you've got your character and it's moving around properly, it's time to
 
 + Start by creating a **Sphere** (**GameObject > 3D Object > Sphere**). Rename it `Ball`. 
 
-+ Set the **Transform** property of `Ball` to:
++ Set the **Transform Position** property of `Ball` to:
 ```
   X: 0
   Y: 1
@@ -14,7 +14,7 @@ Now that you've got your character and it's moving around properly, it's time to
 
 ![The sphere and the green material](images/step10_AddGreenBall.png)
 
-If you test the game now and walk MazeRobo into the sphere, you'll notice it behaves just like the wall: it doesn't move. You want the sphere to be a rolling ball, though, so you'll need to give it some rules for moving, like MazeRobo has.
+If you test the game now and walk MazeRobo into the sphere, you'll notice it behaves just like the wall: it doesn't move. You want the sphere to be a rolling ball though, so you'll need to give it some rules for moving, like MazeRobo has.
 
 + Select `Ball` and give it a **Rigidbody** component (**Component > Physics > Rigidbody**).
 
