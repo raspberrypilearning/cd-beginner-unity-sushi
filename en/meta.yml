@@ -1,0 +1,24 @@
+title: Beginner Unity Sushi Cards
+hero_image: images/banner.png
+description: Make your first game with the Unity game development platform
+version: 4.0.0
+listed: true
+copyedit: true
+curriculum: 1, design-0, programming-1, phys-comp-0, manufacture-0, community-0
+interests: games
+technologies: unity
+site_areas: coderdojo
+software: unity
+last_tested: "2018-07-12"
+steps:
+  - title: Introduction
+  - title: What you will need
+  - title: Set the stage
+  - title: Make a robot
+  - title: Add colour
+  - title: "Make the world's ground"
+  - title: Make MazeRobo move
+  - title: Moving properly
+  - title: Camera tracking
+  - title: Give MazeRobo something to play with
+  - title: Winning!
