@@ -1,46 +1,45 @@
-## Moving properly
+## Camera tracking
 
-MazeRobo moves, but it's a little...weird. It doesn't turn around to see where it's going. You can fix that! 
+MazeRobo moves, but right now the camera always stays in the same place. That's going to be a problem if you try to add anything outside of the camera's initial field of vision, or anything that moves outside it (like MazeRobo itself!). Let's make it adjust!
 
-+ Go back into the `RoboMover` script and add this new line below `rb.MovePosition`:
++ Select the **Main Camera** in the Hierarchy and set its **Transform** properties in the Inspector as follows:
+
+  ![Select MainCamera in the Hierarchy](images/step9_SelectMainCamera.png)
+
+  ### Position
+  ```
+  X: 0
+  Y: 9
+  Z: -5
+  ```
+  ### Rotation
+  ```
+  X: 60
+  Y: 0
+  Z: 0
+  ```  
+  ### Scale
+  ```
+  X: 1
+  Y: 1
+  Z: 1
+  ```
+![Setting the transform values for the main camera](images/step9_MainCameraTransform.png)
+
+Now you've changed the camera's angle (run the game to test it if you like!), but it still doesn't follow MazeRobo. 
+
+To make that happen, you'll have to update the camera's location every frame, and for that, you'll need another script!
+
++ Create a new script (**Assets > Create > C# Script**) and call it `CameraMover`. Put it in the `Scripts` folder.
+
++ At the start of the script, just inside the `CameraMover` **class**, add three **variables** like so:
 
 ```cs
-rb.MoveRotation (Quaternion.LookRotation (desiredDirection, Vector3.up));
-```
-
-This line makes MazeRobo look where it's going.
-
-+ Run the game and check it out!
-
-MazeRobo does look where it's going, but as soon as you release the controls it springs back to looking in its original direction. You can fix that too!
-
---- collapse ---
----
-title: Why does the robot spring back to facing the other way?
----
-
-The problem is that Unity understands MazeRobo's original direction as the default value `0`, and so when there's no active input from the player, the input is `0`, so that's where to robot faces.
-
-You need to make it so that MazeRobo will only turn based on active player input.
-
-The check you'll use for this in the code is: **if** the player's input is bigger than a very small number \(`0.01`\), **then** move and turn. So nothing will happen for that default `0`.
-
---- /collapse ---
-
-+ The first thing you'll need to do is wrap all your existing direction change code in an `if` statement, which only runs the code inside it if the condition in the brackets is `true`.
-
-```cs
-// Update is called once per frame
-void Update () {
-
-    if (true) {
-      Vector3 desiredDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0.0f, Input.GetAxis ("Vertical"));
-      desiredDirection = moveSpeed * desiredDirection;
-      desiredDirection = Time.deltaTime * desiredDirection;
-      rb.MovePosition (rb.position + desiredDirection);
-      rb.MoveRotation (Quaternion.LookRotation (desiredDirection, Vector3.up));
-    }
-}
+  public class CameraMover : MonoBehaviour {
+    
+    public Transform tf;
+    public Transform playerTransform;
+    public Vector3 distanceBetweenPlayerAndCam;      
 ```
 
 --- collapse ---
@@ -48,63 +47,35 @@ void Update () {
 title: What does the new code do?
 ---
 
-Right now, you're forcing the `if` statement to be **true** by actually passing it `true` as the condition. This means the code will run exactly as it did before. You'll change that in a moment.
+These lines of code track:
++ The position of the camera (`tf`)
++ The position of MazeRobo (`playerTransform`)
++ The distance, in (X, Y, Z), from MazeRobo to the camera (`distanceBetweenPlayerAndCam`)
 
 --- /collapse ---
 
-+ Run the game and check it's all still working.
-
-Now you need to create your test conditions.
-
-+ Above the `if` statement but still inside the `Update` function, you'll need to collect the player inputs and get their **absolute** values like this:
++ Now you need to set the initial distance between MazeRobo and the camera as the one you want to keep. Do this inside the `Start` function like so:
 
 ```cs
-    void Update () {
-
-    float inputHorizontal = Mathf.Abs (Input.GetAxis ("Horizontal"));
-    float inputVertical = Mathf.Abs (Input.GetAxis ("Vertical"));
-
-    if (true) {
+  void Start () {
+    distanceBetweenPlayerAndCam = tf.position - playerTransform.position;
+  }	
 ```
-
---- collapse ---
----
-title: What is an absolute value, and what does it do?
----
-
-When you tell MazeRobo to go forward, Unity sees that as a positive number \(e.g. `1`\), and when you tell it to go backwards, Unity sees that as a negative number \(e.g. `-1`\).
-
-You just want to test for the **size** of the number, regardless of its sign, which is why you're using the absolute value of the number.
-
-The **absolute value** is the value of the number without the sign, so it's always a positive number or zero.
-
---- /collapse ---
- 
-Now it's time to update the `if` statement so it actually tests something! You'll need to change what's in the brackets after  the `if` so that it checks if `inputHorizontal` is **greater** than `0.01` **or** if `inputVertical` is **greater** than `0.01`, and gives a `true` result in either case. 
-
-To do this, you'll need to use an 'or' between your conditions that your computer can understand. In C\# \(the language you're writing your Unity scripts in\) we represent 'or' with two pipe characters, like this: `condition A || condition B`. There are also other ways of joining two or more conditions, for example the 'and' operator \(`&&`\), and you can look those up online if you need them.  
-
-+ To write the 'or' condition you need, just update your `if` statement like this:
-
+  
++ Next, ensure that the game keeps that distance the same in every frame of the game by adding a line to the `Update` function like so:
+  
 ```cs
-  if (inputHorizontal > 0.01f || inputVertical > 0.01f) {
+  void Update () {
+    tf.position = playerTransform.position + distanceBetweenPlayerAndCam;
+  }
 ```
 
-Now MazeRobo should stay facing the direction it's just moved in! If you're having any problems, check that your `Update` function matches this code:
++ You need to attach the script to the camera now, so go back to Unity and select the Main Camera in the Hierarchy. Then drag the `CameraMover` script from the Project space onto the Main Camera.
 
-```cs
-void Update () {
++ Find the **CameraMover** field in the Inspector, and drag the Main Camera from the Hierarchy into the **Tf** field. Then drag MazeRobo from the Hierarchy into the **Player Transform** field.
 
-  float inputHorizontal = Mathf.Abs (Input.GetAxis ("Horizontal"));
-  float inputVertical = Mathf.Abs (Input.GetAxis ("Vertical"));
+![Drag the objects from the Hierarchy onto the script](images/step9_dragFromHierarchyOntoScript.png)
 
-  if (inputHorizontal > 0.01f || inputVertical > 0.01f) {
-    Vector3 desiredDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0.0f, Input.GetAxis ("Vertical"));
-    desiredDirection = moveSpeed * desiredDirection;
-    desiredDirection = Time.deltaTime * desiredDirection;
-    rb.MovePosition (rb.position + desiredDirection);
-    rb.MoveRotation (Quaternion.LookRotation (desiredDirection, Vector3.up));
-    }
-```
++ Now run the game and watch the camera follow MazeRobo around! 
 
-![MazeRobo facing towards us](images/step8_RoboFacingCamera.png)
+![The new camera angle in action](images/step9_CameraFollowing.png)

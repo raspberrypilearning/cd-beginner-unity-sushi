@@ -1,50 +1,77 @@
-## Set the stage
+## Make a robot
 
-Before you can get started making your game, you need to do a little setup.
+Time to create your first object!
 
-+ Start Unity and choose **New** to create a new project.
++ Make a **Capsule** object \(**GameObject > 3D Object > Capsule**\): this will be the body of MazeRobo, your robot!
 
-![](images/New_Unity.png)
+  ![The new capsule object](images/step4_capsule.png)
 
-+ When asked for a name for the project, call it "Beginner Unity Sushi" so it'll be easy to find later!
++ Select the Capsule by clicking on it. On the right you should see loads of options and menus. This is called the **Inspector**, and it's where you set up most of the objects in your game.
 
-+ Click **Create Project** and wait for your project to appear on screen!
+You can rename an object by typing a new name in at the top of the Inspector.
 
-+ In the top right-hand corner of the Unity window, you'll see a menu called **Layout**. Click on it and pick **Default**.
++ Change the name of the Capsule to `MazeRobo` now.
 
-  ![The Unity screen with the Layout menu at the top right](images/step3_layout.png)
+  ![](images/step4_rename.png)
 
-+ Look at the panel named **Assets**. You should see a folder there called **`Scenes`**. 
++ Next, to be sure that MazeRobo is right in the middle of the game world, look in the **Transform** section of the Inspector, click on the cog icon, and choose **Reset**.
 
-  ![The Scenes folder in Assets](images/step3_scenes.png)
+  ![](images/step4_Transform.png)
+  
++ You need a couple more objects to make your robot, so create a **Cube** \(**GameObject > 3D Object > Cube**\) and a **Sphere** \(**GameObjects > 3D Object > Sphere**\).
 
---- collapse ---
----
-title: There is no Scenes folder
----
++ Change the name of the Cube to `Shades`, and the name of the Sphere to `Nose`.
 
-If there is no folder named `Scenes`, you can create it.
++ Look at the left of the screen. You should see a list of the objects in your game, including `MazeRobo`, `Shades`, and `Nose`. Click on `Shades` and drag it onto `MazeRobo`. Then drag `Nose` onto `MazeRobo` in the same way.
 
-+ Go to the menu bar (on a Mac it's at the top of the screen, on a Windows PC it's at the top of the Unity window) and choose the **Assets** menu toward the left.
-
-+ Select **Create > Folder**, which means pick the **Create** option and then the **Folder** option in the menu that opens below.
-
-+ You'll be asked for a name for your new folder. Call it `Scenes`.
-
---- /collapse ---
-
-The next thing you need is a scene. It turns our you already have one, because the Unity project started with one, so you just need to save it.
-
-+ Go to the top menu and choose **File > Save Scene as...**. You'll need to give the scene a name and choose a location to save it in. Call it `MazeRoboBegins` and save it in the `Scenes` folder that's inside the `Assets` folder.
+  ![The objects list](images/step4_moveObjects.png)
+  ![The objects list after moving Shades and Nose onto MazeRobo](images/step4_afterMove.png)
 
 --- collapse ---
 ---
-title: Saving your work
+title: Dragging objects together
 ---
 
-+ Remember to save regularly as you go along, so that you don't accidentally lose all your hard work!
+This puts the `Shades` and `Nose` objects 'inside' the `MazeRobo` object, so when they move, they move together. 
 
-+ To save, click **File > Save Scenes**, or press the <kbd>Ctrl</kbd> (<kbd>cmd</kbd> on a Mac!) and <kbd>s</kbd> keys together.
-
+Putting objects 'inside' other objects lets you build up complex objects \(like a game character!\) from simple ones like Cubes, Spheres, Capsules, etc.
 
 --- /collapse ---
+
++ Now select the `Shades` object and look at the Inspector's **Transform** section. You will see a set of three **coordinates**  \(X, Y, Z\) that control the object's **Position**.
+
++ Try changing each of the coordinates' value to see which direction they control. Try putting a `-` in front of some of the numbers too! Finally, set them to these values:
+```
+   X = 0
+   Y = 0.64
+   Z = 0.42
+```
+  ![Changing the position coordinates](images/step4_TransformPosition.png)
+
++ Do the same for `Nose`, setting them like this:
+```
+    X = 0
+    Y = 0.5
+    Z = 0.5
+```
+This doesn't quite look like anything yet, does it? To make MazeRobo look like a robot, you'll adjust what `Shades` and `Nose` look like. You can control the shape of objects with the **Scale** controls.
+
++ Staying in the **Inspector**, look at the scale controls for `Shades`. Set its scale to these values:
+```
+    X = 0.64
+    Y = 0.16
+    Z = 0.16
+```
+  ![Changing the scale values](images/step4_TransformScale.png)
+
++ Now set the `Nose` scale to:
+```
+    X = 0.16
+    Y = 0.16
+    Z = 0.16
+```
+Now it's starting to look like a robot!
+
+  ![The robot character](images/step4_robot.png)
+  
+In the next step, it's time to add some colour!

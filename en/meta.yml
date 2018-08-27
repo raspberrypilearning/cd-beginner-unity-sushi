@@ -12,7 +12,6 @@ software: unity
 last_tested: "2018-07-12"
 steps:
   - title: Introduction
-  - title: What you will need
   - title: Set the stage
   - title: Make a robot
   - title: Add colour
