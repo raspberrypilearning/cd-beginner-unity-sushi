@@ -1,4 +1,4 @@
-title: Beginner Unity Sushi Cards
+title: A-mazing robot
 hero_image: images/banner.png
 description: Make your first game with the Unity game development platform
 version: 4.0.0
@@ -12,7 +12,6 @@ software: unity
 last_tested: "2018-07-12"
 steps:
   - title: Introduction
-  - title: What you will need
   - title: Set the stage
   - title: Make a robot
   - title: Add colour

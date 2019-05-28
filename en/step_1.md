@@ -8,12 +8,44 @@ You’re going to build a simple video game with a robot, a ball, and a maze, an
 
 ![A game where the robot must get the ball into the yellow zone](images/step1_gameScreenshot.png)
 
-### What you will learn
+--- collapse ---
+---
+title: What you will learn
+---
 
 + How to create 3D objects
 + How to change the colour, shape, and position of objects
 + How to adjust the camera angle to follow a player in the game
 + How to add a script to an object and write code to control movement and behaviour
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: What you will need
+---
+
+### Hardware
+
++ A computer (either Windows or macOS) capable of running Unity
+
+### Software
+
++ You'll need to install Unity and get it set up on your computer. This might take a while, as it's a big piece of software.
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: How to get Unity
+---
+
++ Go to [dojo.soy/getunity](http://dojo.soy/getunity) and click on the **Download Installer** button.
++ Run the installer program once it's downloaded, and follow the on-screen instructions, accepting all the default options.
++ Wait for the download and installation steps to complete.
++ Once the Unity software is installed, you will need to create an account (or sign in if you already have one). This is so that you can access the free version, which is for personal use.
+
+--- /collapse ---
 
 ### Additional information for educators
 

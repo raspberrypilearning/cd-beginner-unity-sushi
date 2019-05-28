@@ -1,46 +1,42 @@
-## Add colour
+## Make the world's ground
 
-+ Create a new folder by clicking **Assets > Create > Folder**, and call it `Materials`.
+Now you're going to create a ground plane for MazeRobo to move about on!
 
-+ Now make two **materials** (**Assets > Create > Material**) called `EyeBlack` and `NoseRed`.
++ Start by adding a **Quad** object to be the ground (**GameObject > 3D Object > Quad**). Change the name of this object from `Quad` to `Ground` in the Inspector.
+ 
++ In the Inspector for this new object under **Transform**, set the **X Rotation** to `90`, and for **Scale**, enter these values:
+```
+  X = 40.96
+  Y = 40.96
+  Z = 1
+```
 
-+ The two new materials should be in the `Materials` folder you just made, inside the **Project** pane at the bottom of the screen. If they are not there, drag them onto the the `Materials` folder to place them inside it.
+  ![Setting the transform properties for the ground](images/step6_groundTransform.png)
 
-![The materials folder containing the two new materials](images/step5_materialsFolder.png)
+Gah! MazeRobo’s stuck halfway into the ground! Let's move her up by one meter.
 
---- collapse ---
----
-title: Renaming things
----
++ Select MazeRobo and, in the Inspector under **Transform**, set the following **Position** coordinates: 
+```
+  X = 0
+  Y = 1
+  Z = 0
+```
+  ![Positioning MazeRobo onto the ground](images/step6_MazeRoboOnGround.png)
+ 
+Now you’ll add a wall to start your maze!
 
-You can change the name of a material or a folder by right-clicking it and selecting **Rename**.
++ Create a Cube (**GameObject > 3D Object > Cube**) and set its **Transform Position** to:
+```
+  X = -2
+  Y = 1.5
+  Z = 0 
+```
++ Set the Y **Scale** to `3` and rename the object to `Wall`.
+ 
++ Now make a new material for `Wall` (**Assets > Create > Materials**), rename it `WallBlue`, and change its albedo to give it a (surprise!) blue colour.
 
-![Selecting Rename from the right click menu](images/step5_rename.png)
++ Assign the `WallBlue` material to `Wall` using the **MeshRender > Materials** section of the Inspector (you can also drag the material straight onto the object).
 
---- /collapse ---
+Later on, you’ll turn this wall into a maze for MazeRobo to explore!
 
-+ You can set the colour of a material by changing its **albedo** value in the Inspector. Click on the rectangle next to the dropper icon, and a colour picker should open.
-
-![The colour picker](images/colour_picker.png)
-
-+ Make `EyeBlack`’s albedo value black, and `NoseRed`’s albedo value red.
-
-+ Select the `Shades` object, look at the **Mesh Renderer** section of the Inspector, and expand the **Materials** subsection. Click on the small circle to the right of **Element 0** and select `EyeBlack`. Now MazeRobo has black shades!
-
-![The Mesh Renderer section of the inspector](images/step5_chooseMaterial.png)
-
-+ Do the same for the `Nose` object as you did for the `Shades` object, only now select the `NoseRed` material. Now you have given MazeRobo a red nose!
-
-![MazeRobo with colour added](images/step5_mazeRoboInColour.png)
-
-### Giving your robot rules
-
-MazeRobo needs a **Rigidbody** component so that you can move her about and let her interact with the world.
-
-+ With MazeRobo selected, click on **Component > Physics > Rigidbody**. This will let you set rules for how MazeRobo behaves in the game.
-
-+ You'll see now that when you have MazeRobo selected, there's a **Rigidbody** section in the Inspector. Open up the **Constraints** subsection of the **Rigidbody** section, and set **Freeze Rotation X, Y and Z** to **True** by clicking in all the boxes. In **Freeze Position**, set **Y** to **True** by clicking that box.
-
-![Setting the Rigidibody constraints](images/step5_RigidbodyConstraints.png)
-
-+ Now you have a basic robot character you can use in your game. You can really make it your own by changing a few colours around, or maybe adding extra pieces to it using more **3D Objects** that you can position, like you did in the last step! Once you're happy with your robot, move on to the next step.
+![MazeRobo next to the Wall object](images/step6_Wall.png)

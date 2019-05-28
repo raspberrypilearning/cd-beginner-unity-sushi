@@ -1,77 +1,46 @@
-## Make a robot
+## Add colour
 
-Time to create your first object!
++ Create a new folder by clicking **Assets > Create > Folder**, and call it `Materials`.
 
-+ Make a **Capsule** object \(**GameObject > 3D Object > Capsule**\): this will be the body of MazeRobo, your robot!
++ Now make two **materials** (**Assets > Create > Material**) called `EyeBlack` and `NoseRed`.
 
-  ![The new capsule object](images/step4_capsule.png)
++ The two new materials should be in the `Materials` folder you just made, inside the **Project** pane at the bottom of the screen. If they are not there, drag them onto the the `Materials` folder to place them inside it.
 
-+ Select the Capsule by clicking on it. On the right you should see loads of options and menus. This is called the **Inspector**, and it's where you set up most of the objects in your game.
-
-You can rename an object by typing a new name in at the top of the Inspector.
-
-+ Change the name of the Capsule to `MazeRobo` now.
-
-  ![](images/step4_rename.png)
-
-+ Next, to be sure that MazeRobo is right in the middle of the game world, look in the **Transform** section of the Inspector, click on the cog icon, and choose **Reset**.
-
-  ![](images/step4_Transform.png)
-  
-+ You need a couple more objects to make your robot, so create a **Cube** \(**GameObject > 3D Object > Cube**\) and a **Sphere** \(**GameObjects > 3D Object > Sphere**\).
-
-+ Change the name of the Cube to `Shades`, and the name of the Sphere to `Nose`.
-
-+ Look at the left of the screen. You should see a list of the objects in your game, including `MazeRobo`, `Shades`, and `Nose`. Click on `Shades` and drag it onto `MazeRobo`. Then drag `Nose` onto `MazeRobo` in the same way.
-
-  ![The objects list](images/step4_moveObjects.png)
-  ![The objects list after moving Shades and Nose onto MazeRobo](images/step4_afterMove.png)
+![The materials folder containing the two new materials](images/step5_materialsFolder.png)
 
 --- collapse ---
 ---
-title: Dragging objects together
+title: Renaming things
 ---
 
-This puts the `Shades` and `Nose` objects 'inside' the `MazeRobo` object, so when they move, they move together. 
+You can change the name of a material or a folder by right-clicking it and selecting **Rename**.
 
-Putting objects 'inside' other objects lets you build up complex objects \(like a game character!\) from simple ones like Cubes, Spheres, Capsules, etc.
+![Selecting Rename from the right click menu](images/step5_rename.png)
 
 --- /collapse ---
 
-+ Now select the `Shades` object and look at the Inspector's **Transform** section. You will see a set of three **coordinates**  \(X, Y, Z\) that control the object's **Position**.
++ You can set the colour of a material by changing its **albedo** value in the Inspector. Click on the rectangle next to the dropper icon, and a colour picker should open.
 
-+ Try changing each of the coordinates' value to see which direction they control. Try putting a `-` in front of some of the numbers too! Finally, set them to these values:
-```
-   X = 0
-   Y = 0.64
-   Z = 0.42
-```
-  ![Changing the position coordinates](images/step4_TransformPosition.png)
+![The colour picker](images/colour_picker.png)
 
-+ Do the same for `Nose`, setting them like this:
-```
-    X = 0
-    Y = 0.5
-    Z = 0.5
-```
-This doesn't quite look like anything yet, does it? To make MazeRobo look like a robot, you'll adjust what `Shades` and `Nose` look like. You can control the shape of objects with the **Scale** controls.
++ Make `EyeBlack`’s albedo value black, and `NoseRed`’s albedo value red.
 
-+ Staying in the **Inspector**, look at the scale controls for `Shades`. Set its scale to these values:
-```
-    X = 0.64
-    Y = 0.16
-    Z = 0.16
-```
-  ![Changing the scale values](images/step4_TransformScale.png)
++ Select the `Shades` object, look at the **Mesh Renderer** section of the Inspector, and expand the **Materials** subsection. Click on the small circle to the right of **Element 0** and select `EyeBlack`. Now MazeRobo has black shades!
 
-+ Now set the `Nose` scale to:
-```
-    X = 0.16
-    Y = 0.16
-    Z = 0.16
-```
-Now it's starting to look like a robot!
+![The Mesh Renderer section of the inspector](images/step5_chooseMaterial.png)
 
-  ![The robot character](images/step4_robot.png)
-  
-In the next step, it's time to add some colour!
++ Do the same for the `Nose` object as you did for the `Shades` object, only now select the `NoseRed` material. Now you have given MazeRobo a red nose!
+
+![MazeRobo with colour added](images/step5_mazeRoboInColour.png)
+
+### Giving your robot rules
+
+MazeRobo needs a **Rigidbody** component so that you can move her about and let her interact with the world.
+
++ With MazeRobo selected, click on **Component > Physics > Rigidbody**. This will let you set rules for how MazeRobo behaves in the game.
+
++ You'll see now that when you have MazeRobo selected, there's a **Rigidbody** section in the Inspector. Open up the **Constraints** subsection of the **Rigidbody** section, and set **Freeze Rotation X, Y and Z** to **True** by clicking in all the boxes. In **Freeze Position**, set **Y** to **True** by clicking that box.
+
+![Setting the Rigidibody constraints](images/step5_RigidbodyConstraints.png)
+
++ Now you have a basic robot character you can use in your game. You can really make it your own by changing a few colours around, or maybe adding extra pieces to it using more **3D Objects** that you can position, like you did in the last step! Once you're happy with your robot, move on to the next step.
