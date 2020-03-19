@@ -1,24 +1,24 @@
-## What you will need
+## Wat heb je nodig
 
 ### Hardware
 
-+ A computer (either Windows or macOS) capable of running Unity
++ Een computer (Windows of macOS) waarop Unity kan worden uitgevoerd
 
 ### Software
 
-+ You'll need to install Unity and get it set up on your computer. This might take a while, as it's a big piece of software.
++ U moet Unity installeren en instellen op uw computer. Dit kan even duren, omdat het een groot stuk softwarepakket is.
 
 --- collapse ---
 ---
-title: How to get Unity
+titel: Hoe Unity te verkrijgen
 ---
 
-+ Go to [dojo.soy/getunity](http://dojo.soy/getunity) and click on the **Download Installer** button.
++ Ga naar [ dojo.soy/getunity ](http://dojo.soy/getunity) en klik op het ** Download-installatieprogramma ** knop.
 
-+ Run the installer program once it's downloaded, and follow the on-screen instructions, accepting all the default options.
++ Voer het installatieprogramma uit nadat het is gedownload en volg de instructies op het scherm en accepteer alle standaardopties.
 
-+ Wait for the download and installation steps to complete.
++ Wacht tot de download- en installatiestappen zijn voltooid.
 
-+ Once the Unity software is installed, you will need to create an account (or sign in if you already have one). This is so that you can access the free version, which is for personal use.
++ Zodra de Unity-software is geïnstalleerd, moet je een account maken (of inloggen als je er al een heeft). Dit is zodat je toegang hebt tot de gratis versie, die enkel voor persoonlijk gebruik gratis is.
 
 --- /collapse ---
