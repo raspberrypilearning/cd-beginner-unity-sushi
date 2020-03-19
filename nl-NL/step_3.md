@@ -1,28 +1,28 @@
-## Make a robot
+## Maak een robot
 
-Time to create your first object!
+Tijd om je eerste object te maken!
 
-+ Make a **Capsule** object \(**GameObject > 3D Object > Capsule**\): this will be the body of MazeRobo, your robot!
++ Maak een ** Capsule ** object \ (** GameObject > 3D Object > Capsule ** \): dit wordt het lichaam van MazeRobo, jouw robot!
 
-  ![The new capsule object](images/step4_capsule.png)
+  ![Het nieuwe capsule-object](images/step4_capsule.png)
 
-+ Select the Capsule by clicking on it. On the right you should see loads of options and menus. This is called the **Inspector**, and it's where you set up most of the objects in your game.
++ Selecteer de capsule door erop te klikken. Aan de rechterkant zou je heel veel opties en menu's moeten zien. Dit heet de ** Inspector **, en hier stel je de meeste objecten in je spel in.
 
-You can rename an object by typing a new name in at the top of the Inspector.
+U kunt de naam van een object wijzigen door bovenaan de Inspector een nieuwe naam in te voeren.
 
-+ Change the name of the Capsule to `MazeRobo` now.
++ Verander nu de naam van de Capsule in `MazeRobo`.
 
   ![](images/step4_rename.png)
 
-+ Next, to be sure that MazeRobo is right in the middle of the game world, look in the **Transform** section of the Inspector, click on the cog icon, and choose **Reset**.
++ Om er zeker van te zijn dat MazeRobo midden in de gamewereld staat, kijk je in de ** Transform ** sectie van de Inspector, klik op het tandwielpictogram en kies ** Reset **.
 
   ![](images/step4_Transform.png)
 
-+ You need a couple more objects to make your robot, so create a **Cube** \(**GameObject > 3D Object > Cube**\) and a **Sphere** \(**GameObjects > 3D Object > Sphere**\).
++ Je hebt nog een paar objecten nodig om je robot te maken, dus maak een **Cube** \ (** GameObject > 3D Object > Cube ** \) en een ** Sphere ** \ (** GameObjects > 3D Object > Sphere ** \).
 
-+ Change the name of the Cube to `Shades`, and the name of the Sphere to `Nose`.
++ Wijzig de naam van de kubus in ` zonnebril `, en de naam van de bol naar ` neus `.
 
-+ Look at the left of the screen. You should see a list of the objects in your game, including `MazeRobo`, `Shades`, and `Nose`. Click on `Shades` and drag it onto `MazeRobo`. Then drag `Nose` onto `MazeRobo` in the same way.
++ Kijk aan de linkerkant van het scherm. Je zou een lijst met de objecten in je game moeten zien, inclusief ` MazeRobo `, ` Zonnebril `, en ` Neus `. Klik op ` Zonnebril ` en sleep het naar ` MazeRobo `. Sleep vervolgens ` Neus ` op ` MazeRobo ` op dezelfde manier.
 
   ![The objects list](images/step4_moveObjects.png) ![The objects list after moving Shades and Nose onto MazeRobo](images/step4_afterMove.png)
 
@@ -53,9 +53,9 @@ Putting objects 'inside' other objects lets you build up complex objects \(like 
     Y = 0.5
     Z = 0.5
 ```
-This doesn't quite look like anything yet, does it? To make MazeRobo look like a robot, you'll adjust what `Shades` and `Nose` look like. You can control the shape of objects with the **Scale** controls.
+This doesn't quite look like anything yet, does it? Om MazeRobo op een robot te laten lijken, pas je de ` Zonnebril ` aan en ` neus ` ziet eruit als. You can control the shape of objects with the **Scale** controls.
 
-+ Staying in the **Inspector**, look at the scale controls for `Shades`. Set its scale to these values:
++ Kijk nog even in de ** Inspector **, en bekijk daar de scale control (schaal bediening) voor ` Schaduwen `. Set its scale to these values:
 ```
     X = 0.64
     Y = 0.16
