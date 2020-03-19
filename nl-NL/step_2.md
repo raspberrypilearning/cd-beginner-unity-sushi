@@ -1,50 +1,50 @@
-## Set the stage
+## Maak het speelveld
 
-Before you can get started making your game, you need to do a little setup.
+Voordat je aan de slag kunt gaan met het maken van je game, moet je eerst het een en ander instellen.
 
-+ Start Unity and choose **New** to create a new project.
++ Start Unity en kies **New** om een nieuw project te creëren.
 
 ![](images/New_Unity.png)
 
-+ When asked for a name for the project, call it "Beginner Unity Sushi" so it'll be easy to find later!
++ Wanneer je gevraagd wordt om een naam voor het project, noem het dan "Beginner Unity Sushi", zodat het later gemakkelijk te vinden is!
 
-+ Click **Create Project** and wait for your project to appear on screen!
++ Klik op **Create Project** en wacht tot jouw project op het scherm verschijnt!
 
-+ In the top right-hand corner of the Unity window, you'll see a menu called **Layout**. Click on it and pick **Default**.
++ In de rechterbovenhoek van het Unity-venster ziet je een menu met de naam **Layout**. Klik erop en kies ** Default **.
 
-  ![The Unity screen with the Layout menu at the top right](images/step3_layout.png)
+  ![Het Unity-scherm met het Layout-menu in de rechterbovenhoek](images/step3_layout.png)
 
-+ Look at the panel named **Assets**. You should see a folder there called **`Scenes`**.
++ Kijk naar het paneel met de naam **Assets **. Je zou daar een map moeten zien met de naam **`Scenes`**.
 
-  ![The Scenes folder in Assets](images/step3_scenes.png)
+  ![De map Scenes in Assets](images/step3_scenes.png)
 
 --- collapse ---
 ---
-title: There is no Scenes folder
+titel: Er is geen map Scenes
 ---
 
-If there is no folder named `Scenes`, you can create it.
+Als er geen map is met de naam `Scenes`, kun je deze maken.
 
-+ Go to the menu bar (on a Mac it's at the top of the screen, on a Windows PC it's at the top of the Unity window) and choose the **Assets** menu toward the left.
++ Ga naar de menubalk (op een Mac staat deze bovenaan het scherm, op een Windows-pc staat deze bovenaan het Unity-venster) en kies de ** Assets ** menu naar links.
 
-+ Select **Create > Folder**, which means pick the **Create** option and then the **Folder** option in the menu that opens below.
++ Selecteer ** Create > Folder **, wat betekent dat je de ** Create ** optie kiest en vervolgens de **folder ** optie in het menu dat hieronder opent.
 
-+ You'll be asked for a name for your new folder. Call it `Scenes`.
++ Je wordt gevraagd naar een naam voor je nieuwe map. Noem het `Scenes`.
 
 --- /collapse ---
 
-The next thing you need is a scene. It turns our you already have one, because the Unity project started with one, so you just need to save it.
+Het volgende dat je nodig hebt, is een scène. Het blijkt dat je er al een hebt, omdat het Unity-project met een is begonnen, dus je hoeft het alleen maar op te slaan.
 
-+ Go to the top menu and choose **File > Save Scene as...**. You'll need to give the scene a name and choose a location to save it in. Call it `MazeRoboBegins` and save it in the `Scenes` folder that's inside the `Assets` folder.
++ Ga naar het hoofdmenu en kies ** Bestand > Scène opslaan als ... ** . Je moet de scène een naam geven en een locatie kiezen om hem op te slaan. Noem het ` MazeRoboBegins ` en sla het op in de ` Scenes ` map die zich bevind in de ` Assets` map.
 
 --- collapse ---
 ---
-title: Saving your work
+titel: Uw werk opslaan
 ---
 
-+ Remember to save regularly as you go along, so that you don't accidentally lose all your hard work!
++ Vergeet niet om regelmatig op te slaan, zodat u niet per ongeluk al uw harde werk verliest!
 
-+ To save, click **File > Save Scenes**, or press the <kbd>Ctrl</kbd> (<kbd>cmd</kbd> on a Mac!) and <kbd>s</kbd> keys together.
++ Klik op ** Bestand > Scènes opslaan om op te slaan ** of druk op <kbd> Ctrl </kbd> (<kbd> cmd </kbd> op een Mac!) en <kbd> s </kbd> toetsen samen.
 
 
 --- /collapse ---
