@@ -1,42 +1,42 @@
-## Make the world's ground
+## Maak de grond van je spelwereld
 
-Now you're going to create a ground plane for MazeRobo to move about on!
+Nu ga je een grondvlak maken voor MazeRobo om verder te gaan!
 
-+ Start by adding a **Quad** object to be the ground (**GameObject > 3D Object > Quad**). Change the name of this object from `Quad` to `Ground` in the Inspector.
++ Begin met het toevoegen van een ** Quad ** object om de grond te zijn (** GameObject > 3D Object > Quad ** ). Verander de naam van dit object van ` Quad ` naar ` Ground ` in de Inspector.
 
-+ In the Inspector for this new object under **Transform**, set the **X Rotation** to `90`, and for **Scale**, enter these values:
++ In de Inspector voor dit nieuwe object onder ** Transform **, stel de ** X-rotatie in ** tot ` 90 `, en voor ** Scale **, voer deze waarden in:
 ```
   X = 40.96
-  Y = 40.96
-  Z = 1
+Y = 40.96
+Z = 1
 ```
 
-  ![Setting the transform properties for the ground](images/step6_groundTransform.png)
+  ![De transform properties voor de grond instellen](images/step6_groundTransform.png)
 
-Gah! MazeRobo’s stuck halfway into the ground! Let's move her up by one meter.
+Oei! MazeRobo's zit halverwege de grond vast! Laten we haar een meter opschuiven.
 
-+ Select MazeRobo and, in the Inspector under **Transform**, set the following **Position** coordinates:
++ Selecteer MazeRobo en in de Inspector onder ** Transformeren **, stel de volgende ** positie in ** coördinaten:
 ```
   X = 0
-  Y = 1
-  Z = 0
+Y = 1
+Z = 0
 ```
-  ![Positioning MazeRobo onto the ground](images/step6_MazeRoboOnGround.png)
+  ![MazeRobo op de grond plaatsen](images/step6_MazeRoboOnGround.png)
 
-Now you’ll add a wall to start your maze!
+Nu voeg je een muur toe om je doolhof te starten!
 
-+ Create a Cube (**GameObject > 3D Object > Cube**) and set its **Transform Position** to:
++ Maak een kubus (** GameObject > 3D Object > Cube **) en stel de ** Transform Position ** in naar:
 ```
   X = -2
-  Y = 1.5
-  Z = 0 
+Y = 1.5
+Z = 0 
 ```
-+ Set the Y **Scale** to `3` and rename the object to `Wall`.
++ Stel de Y ** schaal in ** tot ` 3 ` en hernoem het object naar ` Muur `.
 
-+ Now make a new material for `Wall` (**Assets > Create > Materials**), rename it `WallBlue`, and change its albedo to give it a (surprise!) blue colour.
++ Maak nu een nieuw materiaal voor ` Wall ` (** Activa > Creëer > materialen **), hernoem het ` WallBlue `, en verander het albedo om het een (verrassing!) blauwe kleur te geven.
 
-+ Assign the `WallBlue` material to `Wall` using the **MeshRender > Materials** section of the Inspector (you can also drag the material straight onto the object).
++ Wijs de ` WallBlue toe ` materiaal aan ` Muur ` met behulp van de ** MeshRender > materialen ** sectie van de Inspector (je kunt het materiaal ook rechtstreeks naar het object slepen).
 
-Later on, you’ll turn this wall into a maze for MazeRobo to explore!
+Later verander je deze muur in een doolhof, zodat MazeRobo deze kan verkennen!
 
-![MazeRobo next to the Wall object](images/step6_Wall.png)
+![MazeRobo naast het Wall-object](images/step6_Wall.png)
