@@ -1,54 +1,54 @@
-## Introduction
+## Inleiding
 
-In this project you'll make your first game with Unity, a professional game development platform.
+In dit project maak je je eerste game met Unity, een professioneel gameontwikkelingsplatform.
 
-### What you will make
+### Wat ga je maken
 
-You’re going to build a simple video game with a robot, a ball, and a maze, and you'll learn the tools you can use to make the game bigger and more awesome!
+Je gaat een eenvoudig videospel bouwen met een robot, een bal en een doolhof, en je leert de tools die je kunt gebruiken om het spel groter en indrukwekkender te maken!
 
-![A game where the robot must get the ball into the yellow zone](images/step1_gameScreenshot.png)
+![Een spel waarbij de robot de bal in de gele zone (doelvlak) moet krijgen](images/step1_gameScreenshot.png)
 
 --- collapse ---
 ---
-title: What you will learn
+title: Wat ga je leren
 ---
 
-+ How to create 3D objects
-+ How to change the colour, shape, and position of objects
-+ How to adjust the camera angle to follow a player in the game
-+ How to add a script to an object and write code to control movement and behaviour
++ Hoe maak je een 3D object
++ Hoe de kleur, vorm en positie van objecten te veranderen
++ Hoe de camerahoek aan te passen om een speler in het spel te volgen
++ Hoe je een script aan een object kunt toevoegen en code kunt schrijven om beweging en gedrag te beïnvloeden
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: What you will need
+title: Wat heb je nodig
 ---
 
 ### Hardware
 
-+ A computer (either Windows or macOS) capable of running Unity
++ Een computer (Windows of macOS) waarop Unity kan worden uitgevoerd
 
 ### Software
 
-+ You'll need to install Unity and get it set up on your computer. This might take a while, as it's a big piece of software.
++ Je moet Unity installeren en instellen op jouw computer. Dit kan even duren, omdat het een groot softwarepakket is.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: How to get Unity
+titel: Hoe Unity te verkrijgen
 ---
 
-+ Go to [dojo.soy/getunity](http://dojo.soy/getunity) and click on the **Download Installer** button.
-+ Run the installer program once it's downloaded, and follow the on-screen instructions, accepting all the default options.
-+ Wait for the download and installation steps to complete.
-+ Once the Unity software is installed, you will need to create an account (or sign in if you already have one). This is so that you can access the free version, which is for personal use.
++ Ga naar [ dojo.soy/getunity ](http://dojo.soy/getunity) en klik op het ** Download-installatieprogramma ** knop.
++ Voer het installatieprogramma uit nadat het is gedownload en volg de instructies op het scherm en accepteer alle standaardopties.
++ Wacht tot de download- en installatiestappen zijn voltooid.
++ Zodra de Unity-software is geïnstalleerd, moet je een account maken (of inloggen als je er al een heeft). Dit is zodat je toegang hebt tot de gratis versie, die enkel voor persoonlijk gebruik gratis is.
 
 --- /collapse ---
 
-### Additional information for educators
+### Aanvullende informatie voor docenten
 
-If you need to print this project, please use the [printer-friendly version](https://projects.raspberrypi.org/en/projects/project-name/print){:target="_blank"}.
+Als je dit project wilt afdrukken, gebruik dan de [ printvriendelijke versie ](https://projects.raspberrypi.org/en/projects/project-name/print) {:target="_ blank"}.
 
-Use the link in the footer to access the GitHub repository for this project, which contains all resources (including an example finished project) in the 'en/resources' folder.
+Gebruik de link in de voettekst voor toegang tot de GitHub opslagplaats voor dit project, met daarin alle bronnen (inclusief een voorbeeld van een voltooid project) in de map ' en/resources'.
