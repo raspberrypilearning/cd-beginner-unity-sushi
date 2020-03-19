@@ -1,46 +1,46 @@
-## Add colour
+## Voeg een kleur toe
 
-+ Create a new folder by clicking **Assets > Create > Folder**, and call it `Materials`.
++ Maak een nieuwe map door op ** Assets > Maak > map te klikken ** en noem het ` Materials `.
 
-+ Now make two **materials** (**Assets > Create > Material**) called `EyeBlack` and `NoseRed`.
++ Maak nu twee ** materials ** (** Assets > Create > Material **) genaamd ` EyeBlack ` en ` NoseRed `.
 
-+ The two new materials should be in the `Materials` folder you just made, inside the **Project** pane at the bottom of the screen. If they are not there, drag them onto the the `Materials` folder to place them inside it.
++ De twee nieuwe materialen moeten in de ` Materials` map staan die u zojuist hebt gemaakt in het ** Project ** deelvenster onder aan het scherm. Als ze er niet zijn, sleep ze dan naar de ` Materials ` map om ze erin te plaatsen.
 
-![The materials folder containing the two new materials](images/step5_materialsFolder.png)
+![De materialen map met de twee nieuwe materialen](images/step5_materialsFolder.png)
 
 --- collapse ---
 ---
-title: Renaming things
+titel: Dingen hernoemen
 ---
 
-You can change the name of a material or a folder by right-clicking it and selecting **Rename**.
+Je kunt de naam van een materiaal of map wijzigen door er met de rechtermuisknop op te klikken en ** Rename** te selecteren.
 
-![Selecting Rename from the right click menu](images/step5_rename.png)
+![Hernoemen selecteren in het rechtermuisklik menu](images/step5_rename.png)
 
 --- /collapse ---
 
-+ You can set the colour of a material by changing its **albedo** value in the Inspector. Click on the rectangle next to the dropper icon, and a colour picker should open.
++ Je kunt de kleur van een materiaal instellen door de ** albedo ** waarde te wijzigen in de inspecteur. Klik op de rechthoek naast het druppelpictogram en een kleurkiezer zou moeten openen.
 
-![The colour picker](images/colour_picker.png)
+![De kleurenkiezer](images/colour_picker.png)
 
-+ Make `EyeBlack`’s albedo value black, and `NoseRed`’s albedo value red.
++ Maak ` EyeBlack ` 's albedo-waarde zwart en ` NoseRed ` 's albedo waarde rood.
 
-+ Select the `Shades` object, look at the **Mesh Renderer** section of the Inspector, and expand the **Materials** subsection. Click on the small circle to the right of **Element 0** and select `EyeBlack`. Now MazeRobo has black shades!
++ Selecteer de ` Zonnebril ` object, kijk naar de ** Mesh Renderer ** sectie van de Inspector en vouw de ** Materialen uit ** onderafdeling. Klik op de kleine cirkel rechts van ** Element 0 ** en selecteer ` EyeBlack `. Nu heeft MazeRobo zwarte zonnebril!
 
-![The Mesh Renderer section of the inspector](images/step5_chooseMaterial.png)
+![Het Mesh Renderer-gedeelte van de inspecteur](images/step5_chooseMaterial.png)
 
-+ Do the same for the `Nose` object as you did for the `Shades` object, only now select the `NoseRed` material. Now you have given MazeRobo a red nose!
++ Doe hetzelfde voor de ` Neus ` object zoals je deed voor de ` Zonnebril ` object, selecteer nu alleen de ` NoseRed ` materiaal. Nu heb je MazeRobo een rode neus gegeven!
 
-![MazeRobo with colour added](images/step5_mazeRoboInColour.png)
+![MazeRobo met toegevoegde kleur](images/step5_mazeRoboInColour.png)
 
-### Giving your robot rules
+### Je robot regels geven
 
-MazeRobo needs a **Rigidbody** component so that you can move her about and let her interact with the world.
+MazeRobo heeft een ** Rigidbody ** component nodig zodat je haar kunt verplaatsen en haar met de wereld kunt laten communiceren.
 
-+ With MazeRobo selected, click on **Component > Physics > Rigidbody**. This will let you set rules for how MazeRobo behaves in the game.
++ Selecteer MazeRobo en klik op ** Component > Physics > Rigidbody **. Hiermee kun je regels instellen voor hoe MazeRobo zich gedraagt in het spel.
 
-+ You'll see now that when you have MazeRobo selected, there's a **Rigidbody** section in the Inspector. Open up the **Constraints** subsection of the **Rigidbody** section, and set **Freeze Rotation X, Y and Z** to **True** by clicking in all the boxes. In **Freeze Position**, set **Y** to **True** by clicking that box.
++ Je zult nu zien dat wanneer je MazeRobo hebt geselecteerd, er een ** Rigidbody ** sectie is in de Inspector. Open de ** -Constraints ** subsectie van de ** Rigidbody ** sectie en stel ** Freeze Rotation X, Y en Z in ** tot ** Waar ** door in alle vakjes te klikken. In ** Freeze Position **, stel ** Y in ** tot ** True ** door op dat vak te klikken.
 
-![Setting the Rigidibody constraints](images/step5_RigidbodyConstraints.png)
+![De rigidibody-constraints instellen](images/step5_RigidbodyConstraints.png)
 
-+ Now you have a basic robot character you can use in your game. You can really make it your own by changing a few colours around, or maybe adding extra pieces to it using more **3D Objects** that you can position, like you did in the last step! Once you're happy with your robot, move on to the next step.
++ Nu heb je een basis robotkarakter dat je in je spel kunt gebruiken. Je kunt het echt je eigen maken door een paar kleuren te veranderen of er misschien extra stukken aan toe te voegen met meer ** 3D-Objects ** die je kunt positioneren, zoals je deed in de laatste stap! Als je eenmaal tevreden bent met je robot, ga je verder met de volgende stap.
