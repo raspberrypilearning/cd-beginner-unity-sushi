@@ -24,53 +24,53 @@ U kunt de naam van een object wijzigen door bovenaan de Inspector een nieuwe naa
 
 + Kijk aan de linkerkant van het scherm. Je zou een lijst met de objecten in je game moeten zien, inclusief ` MazeRobo `, ` Zonnebril `, en ` Neus `. Klik op ` Zonnebril ` en sleep het naar ` MazeRobo `. Sleep vervolgens ` Neus ` op ` MazeRobo ` op dezelfde manier.
 
-  ![The objects list](images/step4_moveObjects.png) ![The objects list after moving Shades and Nose onto MazeRobo](images/step4_afterMove.png)
+  ![De objectenlijst](images/step4_moveObjects.png) ![De objecten worden weergegeven na het verplaatsen van Zonnebril en Neus naar MazeRobo](images/step4_afterMove.png)
 
 --- collapse ---
 ---
-title: Dragging objects together
+titel: Breng objecten samen door ze te slepen
 ---
 
-This puts the `Shades` and `Nose` objects 'inside' the `MazeRobo` object, so when they move, they move together.
+Dit zet de ` Zonnebril ` en ` Neus ` objecten 'binnen' de ` MazeRobo ` object, dus als ze bewegen, bewegen ze samen.
 
-Putting objects 'inside' other objects lets you build up complex objects \(like a game character!\) from simple ones like Cubes, Spheres, Capsules, etc.
+Door objecten 'in' andere objecten te plaatsen, kun je complexe objecten (zoals een spelpersonage! \) Samenstellen uit eenvoudige objecten zoals kubussen, bollen, capsules, enz.
 
 --- /collapse ---
 
-+ Now select the `Shades` object and look at the Inspector's **Transform** section. You will see a set of three **coordinates**  \(X, Y, Z\) that control the object's **Position**.
++ Selecteer nu de ` Zonnebril ` object en kijk naar de ** Transform van de Inspector ** sectie. Je ziet een set van drie ** coördinaten ** \ (X, Y, Z \) die de ** Positie ** van het object bepalen.
 
-+ Try changing each of the coordinates' value to see which direction they control. Try putting a `-` in front of some of the numbers too! Finally, set them to these values:
++ Probeer de waarde van elk van de coördinaten te veranderen om te zien welke richting ze bepalen. Probeer ook een ` - ` voor de cijfers! Stel ze ten slotte in op deze waarden:
 ```
    X = 0
-   Y = 0.64
-   Z = 0.42
+Y = 0,64
+Z = 0,42
 ```
-  ![Changing the position coordinates](images/step4_TransformPosition.png)
+  ![De positiecoördinaten wijzigen](images/step4_TransformPosition.png)
 
-+ Do the same for `Nose`, setting them like this:
++ Doe hetzelfde voor ` Neus `, ze zo instellen:
 ```
     X = 0
-    Y = 0.5
-    Z = 0.5
+Y = 0,5
+Z = 0,5
 ```
-This doesn't quite look like anything yet, does it? Om MazeRobo op een robot te laten lijken, pas je de ` Zonnebril ` aan en ` neus ` ziet eruit als. You can control the shape of objects with the **Scale** controls.
+Dit ziet er nog niet helemaal goed uit, toch? Om MazeRobo op een robot te laten lijken, pas je de ` Zonnebril ` aan en ` neus ` ziet eruit als. U kunt de vorm van objecten bepalen met de ** schaal ** bedieningselementen.
 
-+ Kijk nog even in de ** Inspector **, en bekijk daar de scale control (schaal bediening) voor ` Schaduwen `. Set its scale to these values:
++ Kijk nog even in de ** Inspector **, en bekijk daar de scale control (schaal bediening) voor ` Schaduwen `. Stel de schaal in op deze waarden:
 ```
-    X = 0.64
-    Y = 0.16
-    Z = 0.16
+    X = 0,64
+Y = 0,16
+Z = 0,16
 ```
-  ![Changing the scale values](images/step4_TransformScale.png)
+  ![De schaalwaarden wijzigen](images/step4_TransformScale.png)
 
-+ Now set the `Nose` scale to:
++ Stel nu de ` Neus ` schaal in naar:
 ```
-    X = 0.16
-    Y = 0.16
-    Z = 0.16
+    X = 0,16
+Y = 0,16
+Z = 0,16
 ```
-Now it's starting to look like a robot!
+Nu begint het op een robot te lijken!
 
-  ![The robot character](images/step4_robot.png)
+  ![Het robotkarakter](images/step4_robot.png)
 
-In the next step, it's time to add some colour!
+In de volgende stap is het tijd om wat kleur toe te voegen!
