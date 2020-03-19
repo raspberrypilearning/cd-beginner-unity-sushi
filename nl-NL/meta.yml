@@ -1,34 +1,34 @@
 ---
 title: A-mazing robot
-hero_image: images/banner.png
-description: Make your first game with the Unity game development platform
+hero_image: afbeeldingen / banner.png
+description: Maak je eerste spel met het ontwikkel platform Unity
 version: 4.0.0
 listed: true
 copyedit: true
 curriculum: 1, design-0, programming-1, phys-comp-0, manufacture-0, community-0
-interests: games
+interests: spellen
 technologies: unity
 site_areas: coderdojo
 software: unity
 last_tested: "2018-07-12"
 steps:
   - 
-    title: Introduction
+    title: Inleiding
   - 
-    title: Set the stage
+    title: Maak het speelveld
   - 
-    title: Make a robot
+    title: Maak een robot
   - 
-    title: Add colour
+    title: Voeg een kleur toe
   - 
-    title: "Make the world's ground"
+    title: "Maak de grond van je spelwereld"
   - 
-    title: Make MazeRobo move
+    title: Laat MazeRobo bewegen
   - 
-    title: Moving properly
+    title: Maak de beweging van de robot
   - 
-    title: Camera tracking
+    title: Automatisch volgen van de camera
   - 
-    title: Give MazeRobo something to play with
+    title: Geef MazeRobo iets om mee te spelen
   - 
-    title: Winning!
+    title: Winnen!
