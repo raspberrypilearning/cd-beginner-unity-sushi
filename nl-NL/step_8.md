@@ -1,10 +1,10 @@
-## Camera tracking
+## Automatisch volgen van de camera
 
-MazeRobo moves, but right now the camera always stays in the same place. That's going to be a problem if you try to add anything outside of the camera's initial field of vision, or anything that moves outside it (like MazeRobo itself!). Let's make it adjust!
+MazeRobo beweegt, maar op dit moment blijft de camera altijd op dezelfde plek. Dat wordt een probleem als je iets buiten het oorspronkelijke gezichtsveld van de camera probeert toe te voegen, of iets dat daarbuiten beweegt (zoals MazeRobo zelf!). Laten we het aanpassen!
 
-+ Select the **Main Camera** in the Hierarchy and set its **Transform** properties in the Inspector as follows:
++ Selecteer de **Main Camera** in de Hierarchy en stel de **Transform** eigenschappen in de Inspector als volgt in:
 
-  ![Select MainCamera in the Hierarchy](images/step9_SelectMainCamera.png)
+  ![Selecteer MainCamera in de hiërarchie](images/step9_SelectMainCamera.png)
 
 
   ### Position
@@ -27,15 +27,15 @@ MazeRobo moves, but right now the camera always stays in the same place. That's 
   Y: 1
   Z: 1
   ```
-![Setting the transform values for the main camera](images/step9_MainCameraTransform.png)
+![Het instellen van de transformatiewaarden voor de main camera](images/step9_MainCameraTransform.png)
 
-Now you've changed the camera's angle (run the game to test it if you like!), but it still doesn't follow MazeRobo.
+Nu heb je de camerahoek gewijzigd (voer het spel uit om het te testen als je wilt!). Maar het volgt MazeRobo nog steeds niet.
 
-To make that happen, you'll have to update the camera's location every frame, and for that, you'll need another script!
+Om dat mogelijk te maken, moet je de locatie van de camera elk frame bijwerken en daarvoor heb je een ander script nodig!
 
-+ Create a new script (**Assets > Create > C# Script**) and call it `CameraMover`. Put it in the `Scripts` folder.
++ Maak een nieuw C\# script \(**Assets > Create > C\# Script**\) en noem het `CameraMover`. Zet het in de `Scripts` map.
 
-+ At the start of the script, just inside the `CameraMover` **class**, add three **variables** like so:
++ Aan het begin van het script, net binnen de `CameraMover` **class**, voeg drie **variabelen** toe zoals dit:
 
 ```cs
   public class CameraMover : MonoBehaviour {
@@ -47,17 +47,17 @@ To make that happen, you'll have to update the camera's location every frame, an
 
 --- collapse ---
 ---
-title: What does the new code do?
+title: Wat doet de nieuwe code?
 ---
 
-These lines of code track:
-+ The position of the camera (`tf`)
-+ The position of MazeRobo (`playerTransform`)
-+ The distance, in (X, Y, Z), from MazeRobo to the camera (`distanceBetweenPlayerAndCam`)
+Deze regels code volgen:
++ De positie van de camera (`tf`)
++ De positie van MazeRobo (`playerTransform`)
++ De afstand, in (X, Y, Z), van MazeRobo tot de camera (`distanceBetweenPlayerAndCam`)
 
 --- /collapse ---
 
-+ Now you need to set the initial distance between MazeRobo and the camera as the one you want to keep. Do this inside the `Start` function like so:
++ Nu moet je de initiële afstand tussen MazeRobo en de camera instellen als degene die je wilt behouden. Doe dit binnen de `Start` functie zo:
 
 ```cs
   void Start () {
@@ -65,7 +65,7 @@ These lines of code track:
   } 
 ```
 
-+ Next, ensure that the game keeps that distance the same in every frame of the game by adding a line to the `Update` function like so:
++ Zorg er vervolgens voor dat de game die afstand in elk frame van de game hetzelfde houdt door een regel toe te voegen aan de `Update` functie als volgt:
 
 ```cs
   void Update () {
@@ -73,12 +73,12 @@ These lines of code track:
   }
 ```
 
-+ You need to attach the script to the camera now, so go back to Unity and select the Main Camera in the Hierarchy. Then drag the `CameraMover` script from the Project space onto the Main Camera.
++ Je moet het script nu aan de camera koppelen, dus ga terug naar Unity en selecteer de Main Camera in de Hierarchy. Sleep vervolgens het `CameraMover` script vanuit de projectruimte op de hoofdcamera.
 
-+ Find the **CameraMover** field in the Inspector, and drag the Main Camera from the Hierarchy into the **Tf** field. Then drag MazeRobo from the Hierarchy into the **Player Transform** field.
++ Zoek de **CameraMover** sectie in de Inspector en sleep de Main Camera van de hiërarchie naar het **Tf** veld. Sleep vervolgens MazeRobo van de Hierarchy naar het **Player Transform** veld.
 
-![Drag the objects from the Hierarchy onto the script](images/step9_dragFromHierarchyOntoScript.png)
+![Sleep de objecten uit de hiërarchie naar het script](images/step9_dragFromHierarchyOntoScript.png)
 
-+ Now run the game and watch the camera follow MazeRobo around!
++ Start nu het spel en kijk hoe de camera MazeRobo volgt!
 
-![The new camera angle in action](images/step9_CameraFollowing.png)
+![De nieuwe camerahoek in actie](images/step9_CameraFollowing.png)
