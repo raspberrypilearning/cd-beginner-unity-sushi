@@ -1,48 +1,48 @@
-## Winning!
+## Winnen!
 
-You've got a robot, you've got a ball... now in order for it to be a game, there's got to be a way to win! You'll be adding that now.
+Je hebt een robot, je hebt een bal... om het een echt spel te laten zijn, moet er een manier zijn om te winnen! Dat ga je nu toevoegen.
 
-+ First, add another cube and call it `WinZone`. Maybe give it a new, noticeable colour (yellow? orange? pink?).
++ Voeg eerst nog een cube (kubus) toe en noem deze `WinZone`. Geef het misschien een nieuwe, opvallende kleur (geel? oranje? roze?).
 
-+ Make sure you have `WinZone` selected in the Hierarchy, and in the Inspector under **Box Collider**, select the **Is Trigger** option.
++ Zorg ervoor dat je `WinZone` geselecteerd hebt in de Hierarchy en in de Inspector onder **Box Collider** selecteer je de **Is Trigger** optie.
 
-![The Is Trigger checkbox has been ticked](images/step11_BoxColliderTrigger.png)
+![Het selectievakje Is Trigger is aangevinkt](images/step11_BoxColliderTrigger.png)
 
-+ Set the **Transform Position** property of `WinZone` so that it is:
++ Stel de **Transform Position** eigenschap van `WinZone` in zodat deze is:
   ```
   X: -5
-  Y: 1
-  Z: -2
+Y: 1
+Z: -2
   ```
-You're going to write another script to let `WinZone` detect when the `Ball` touches it. In order to do that, the ball needs to be **tagged**.
+Je gaat nog een script schrijven om `WinZone` te laten detecteren wanneer de `Ball` aangeraakt wordt. Om dat te doen, moet de bal **getagd (gelabeld)** zijn.
 
-+ Select `Ball` in the Hierarchy, and in the **Inspector** select the **Tag** field just under its name.
++ Selecteer `Ball` in de Hierarchy en in de **Inspector**, selecteer het **tag**-veld net onder zijn naam.
 
-![The Tag property in the inspector](images/step11_BallTagProperty.png)
+![De eigenschap Tag in de inspector (infovenster)](images/step11_BallTagProperty.png)
 
-+ Choose **Add Tag...**, then click on the **+** icon and create the tag 'Ball'.
++ Kies **Add Tag...** en klik vervolgens op het **+** pictogram en maak de tag 'Ball'.
 
-![Click the plus to add a new tag](images/step11_AddTag.png) ![Creating a new tag called Ball](images/step11_NewTagBall.png)
+![Klik op de plus om een nieuwe tag toe te voegen](images/step11_AddTag.png) ![Een nieuwe tag maken met de naam Ball](images/step11_NewTagBall.png)
 
-+ Re-select `Ball` in the Hierarchy, select the **Tag** field again, and choose the 'Ball' tag you just created.
++ Selecteer `Ball` opnieuw, selecteer in de Inspector het **Tag**-veld opnieuw en kies de 'Ball'-tag die je zojuist hebt gemaakt.
 
-![Select the Ball tag for the Ball object](images/step11_ChooseBallTag.png)
+![Selecteer de Ball-tag voor het Ball-object](images/step11_ChooseBallTag.png)
 
-While you're at it, why not add some celebration to let the player know when they've won!
+Terwijl je toch bezig bent, kun je een feestje toevoegen om de speler te laten weten wanneer hij gewonnen heeft!
 
-+ Create a **Particle System** (**GameObject > Effects > Particle System**) and call it `Fireworks`.
++ Maak een **Particle System** (**GameObject > Effects > Particle System**) en noem het `Fireworks (vuurwerk)`.
 
-+ Select the `Fireworks` object and unselect the box beside its name in the Inspector. This hides the object, so you can make it appear once you're ready to set off the fireworks!
++ Selecteer het `Fireworks` object en deselecteer het vak naast de naam in de Inspector. Dit verbergt het object, zodat je het kunt laten verschijnen zodra je klaar bent om het vuurwerk af te steken!
 
-![The checkbox next to Fireworks is unticked](images/step11_uncheckFireworks.png)
+![Het selectievakje naast Fireworks is niet aangevinkt](images/step11_uncheckFireworks.png)
 
-+ Now look in the list of settings in the Inspector, find **Start Color** and set it to yellow, or green, or whatever you like really!
++ Kijk nu in de lijst met instellingen in de Inspector, zoek **Start Color** en zet het op geel, of groen, of wat je maar wilt!
 
-+ Finally, make the **Position** of the `Fireworks` match the **Position** of `WinZone`.
++ Maak ten slotte de **Position** van `Fireworks` gelijk aan de **Position** van `WinZone`.
 
-Now you'll add code to make the fireworks appear when it's the right time!
+Nu voeg je de code toe om het vuurwerk op het juiste moment te laten verschijnen!
 
-+ Create a C# script (in the `Scripts` folder) called `WinZone`. Open the new script and remove the `Start` and `Update` functions. Put this code inside it instead:
++ Maak een C#-script (in de `Scripts` map) genaamd `WinZone`. Open het nieuwe script en verwijder de `Start` en `Update` functies. Zet in plaats daarvan deze code erin:
 
 ```cs
 public GameObject fireworks;
@@ -56,39 +56,39 @@ void OnTriggerEnter (Collider col) {
 
 --- collapse ---
 ---
-title: What does the new code do?
+title: Wat doet de nieuwe code?
 ---
 
-What's happening here is that a GameObject called `fireworks` is created (you'll connect it to your `Fireworks` in a moment), and the script then waits for any **Rigidbody** to touch the **Collider** object it's attached to (whichever one you drag the script onto — in this case it'll be `WinZone`).
+Wat hier gebeurt, is dat een GameObject genaamd `fireworks` is gemaakt (je koppelt het zo dadelijk aan je `Fireworks`), en het script wacht dan tot een **RigidBody** het **Collider**-object aanraakt, waaraan het is gekoppeld (naar welke je het script ook sleept — in dit geval is het `WinZone`).
 
-The **Rigidbody** that collided with it will automatically be assigned to the **Collider** variable `col`. If that **Rigidbody** happens to have the tag 'Ball', then the `fireworks` object will be made to appear.
+De **Rigidbody** die ermee in botsing kwam, wordt automatisch toegewezen aan de **Collider** variabele `col`. Als die **Rigidbody** toevallig de tag 'Ball' heeft, dan zal het `fireworks` object verschijnen.
 
 --- /collapse ---
 
-+ Save the changes to the script and go back into Unity.
++ Sla de wijzigingen in het script op en ga terug naar Unity.
 
-+ Drag the script onto the `WinZone` in the Hierarchy and then, with `WinZone` selected, drag the `Fireworks` object from the Hierarchy into the **Fireworks** field in the **WinZone** section of the Inspector.
++ Sleep het script naar de `WinZone` in de Hierarchy en dan met `WinZone` geselecteerd, sleep het `Fireworks` object van de Hierarchy in het **fireworks** veld in de **WinZone** sectie van de inspector.
 
-![Drag Fireworks onto the script in the WinZone inspector](images/step11_DragFireworksIntoScript.png)
+![Sleep Fireworks naar het script in de WinZone-inspector](images/step11_DragFireworksIntoScript.png)
 
-![The Fireworks value in the script](images/step11_FireworksInScript.png)
+![De Fireworks-waarde in het script](images/step11_FireworksInScript.png)
 
-+ Save the game, run it, and put the `Ball` in the `WinZone`. See what happens!
++ Sla het spel op, voer het uit en plaats de `Ball` in de `WinZone`. Kijken wat er gebeurt!
 
-![Fireworks appearing when the ball is pushed into the win zone](images/step11_WinningFireworks.png)
+![Vuurwerk dat verschijnt wanneer de bal in de winzone wordt geduwd](images/step11_WinningFireworks.png)
 
-That's all the basic pieces of the game!
+Dat zijn alle basisstukken van het spel!
 
 --- challenge ---
 
-## Challenge: make a maze for the robot
+## Uitdaging: maak een doolhof voor de robot
 
-Now, your robot is called 'MazeRobo', so there should probably be a maze!
+Nu heet je robot 'MazeRobo', dus er zou waarschijnlijk een doolhof moeten zijn! (want Maze is het Engelse woord voor doolhof)
 
-+ You've got one wall, so add some more cubes, play with their **Position** and **Scale** to build a few walls!
++ Je hebt één muur, dus voeg nog wat kubussen toe, speel met hun **Position** en **Scale** om een paar muren te bouwen!
 
-+ Give your player a real challenge: move the `WinZone` around a little, so it's harder to get to!
++ Geef je speler een echte uitdaging: verplaats de `WinZone` een beetje, zodat het moeilijker is om er te komen!
 
-+ If you know someone else who is making this game, try doing a swap to see if you can beat each other's mazes!
++ Als je iemand anders kent die dit spel maakt, probeer dan eens te ruilen om te zien of je elkaars doolhoven kunt verslaan!
 
 --- /challenge ---
