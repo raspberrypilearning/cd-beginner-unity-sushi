@@ -1,33 +1,33 @@
-## Moving properly
+## Goed bewegen
 
-MazeRobo moves, but it's a little...weird. It doesn't turn around to see where it's going. You can fix that!
+MazeRobo beweegt, maar het is een beetje... raar. Het draait niet om om te zien waar het heen beweegt. Je kunt dat oplossen!
 
-+ Go back into the `RoboMover` script and add this new line below `rb.MovePosition`:
++ Ga terug naar het `RoboMover` script en voeg deze nieuwe regel toe onder `rb.MovePosition`:
 
 ```cs
 rb.MoveRotation (Quaternion.LookRotation (desiredDirection, Vector3.up));
 ```
 
-This line makes MazeRobo look where it's going.
+Deze regel laat MazeRobo kijken waar het naartoe gaat.
 
-+ Run the game and check it out!
++ Start het spel en bekijk het!
 
-MazeRobo does look where it's going, but as soon as you release the controls it springs back to looking in its original direction. You can fix that too!
+MazeRobo kijkt waar het naartoe gaat, maar zodra je de knoppen loslaat, springt het weer terug in zijn oorspronkelijke richting. Je kunt dat ook oplossen!
 
 --- collapse ---
 ---
-title: Why does the robot spring back to facing the other way?
+title: Waarom springt de robot terug naar de andere kant?
 ---
 
-The problem is that Unity understands MazeRobo's original direction as the default value `0`, and so when there's no active input from the player, the input is `0`, so that's where to robot faces.
+Het probleem is dat Unity de oorspronkelijke richting van MazeRobo kent als de standaardwaarde `0`, en dus als er geen actieve invoer van de speler is, is de invoer `0`, dus dat is waar robot zich naar richt.
 
-You need to make it so that MazeRobo will only turn based on active player input.
+Je moet ervoor zorgen dat MazeRobo alleen draait op basis van actieve spelersinvoer.
 
-The check you'll use for this in the code is: **if** the player's input is bigger than a very small number \(`0.01`\), **then** move and turn. So nothing will happen for that default `0`.
+De controle die je hiervoor in de code gebruikt, is: **als** de invoer van de speler groter is dan een zeer klein getal \(`0.01`\), **dan** bewegen en draaien. Er gebeurt dus niets voor die standaard `0`.
 
 --- /collapse ---
 
-+ The first thing you'll need to do is wrap all your existing direction change code in an `if` statement, which only runs the code inside it if the condition in the brackets is `true`.
++ Het eerste dat je moet doen, is al je bestaande code voor het wijzigen van de richting in een `if` instructie zetten, die alleen de code erbinnen uitvoert als de voorwaarde tussen haakjes `waar` is.
 
 ```cs
 // Update is called once per frame
@@ -45,18 +45,18 @@ void Update () {
 
 --- collapse ---
 ---
-title: What does the new code do?
+title: Wat doet de nieuwe code?
 ---
 
-Right now, you're forcing the `if` statement to be **true** by actually passing it `true` as the condition. This means the code will run exactly as it did before. You'll change that in a moment.
+Op dit moment dwing je dat de `if` instructie **waar** is door het daadwerkelijk `true` te geven als voorwaarde. Dit betekent dat de code precies zo zal werken als voorheen. Dat verander je zo.
 
 --- /collapse ---
 
-+ Run the game and check it's all still working.
++ Voer het spel uit en controleer of alles nog werkt.
 
-Now you need to create your test conditions.
+Nu moet je je testvoorwaarden creëren.
 
-+ Above the `if` statement but still inside the `Update` function, you'll need to collect the player inputs and get their **absolute** values like this:
++ Boven de `if` instructie, maar nog steeds in de `Update` functie, moet je de spelerinvoer verzamelen en hun **absolute** waarden zoals dit:
 
 ```cs
     void Update () {
@@ -69,28 +69,28 @@ Now you need to create your test conditions.
 
 --- collapse ---
 ---
-title: What is an absolute value, and what does it do?
+title: Wat is een absolute waarde en wat doet het?
 ---
 
-When you tell MazeRobo to go forward, Unity sees that as a positive number \(e.g. `1`\), and when you tell it to go backwards, Unity sees that as a negative number \(e.g. `-1`\).
+Wanneer je MazeRobo vertelt om verder te gaan, ziet Unity dat als een positief getal \(bijv. `1`\), en als je het vertelt om achteruit te gaan, ziet Unity dat als een negatief getal \(bijv. `-1`\).
 
-You just want to test for the **size** of the number, regardless of its sign, which is why you're using the absolute value of the number.
+Je wilt gewoon testen voor het **grootte** van het getal, ongeacht het teken, daarom gebruik je de absolute waarde van het getal.
 
-The **absolute value** is the value of the number without the sign, so it's always a positive number or zero.
+De **absolute waarde** is de waarde van het getal zonder het teken, dus het is altijd een positief getal of nul.
 
 --- /collapse ---
 
-Now it's time to update the `if` statement so it actually tests something! You'll need to change what's in the brackets after  the `if` so that it checks if `inputHorizontal` is **greater** than `0.01` **or** if `inputVertical` is **greater** than `0.01`, and gives a `true` result in either case.
+Nu is het tijd om de `if` instructie bij te werken zodat het echt iets test! Je moet wijzigen wat er tussen haakjes staat na de `if` zodat het controleert of `inputHorizontal` **groter** is dan `0.01` **of** dat `inputVertical` **groter** is dan `0.01`, en een `waar` resultaat geeft in beide gevallen.
 
-To do this, you'll need to use an 'or' between your conditions that your computer can understand. In C\# \(the language you're writing your Unity scripts in\) we represent 'or' with two pipe characters, like this: `condition A || condition B`. There are also other ways of joining two or more conditions, for example the 'and' operator \(`&&`\), and you can look those up online if you need them.
+Om dit te doen, moet je een 'of' gebruiken tussen je voorwaarden die je computer kan begrijpen. In C\# \(de taal waarin je je Unity-scripts schrijft\) schrijven we 'of' met twee pijptekens, zoals dit: `voorwaarde A || toestand B`. Er zijn ook andere manieren om aan twee of meer voorwaarden deel te nemen, bijvoorbeeld de operator 'en' \(`&&`\), en je kunt ze online opzoeken als je ze nodig hebt.
 
-+ To write the 'or' condition you need, just update your `if` statement like this:
++ Om de 'of'-voorwaarde te schrijven die je nodig heeft, werk je gewoon je `if` instructie als volgt bij:
 
 ```cs
   if (inputHorizontal > 0.01f || inputVertical > 0.01f) {
 ```
 
-Now MazeRobo should stay facing the direction it's just moved in! If you're having any problems, check that your `Update` function matches this code:
+Nu moet MazeRobo blijven kijken in de richting waarin het net is verplaatst! Als je problemen ondervindt, controleer dan of je `Update` functie overeen komt met deze code:
 
 ```cs
 void Update () {
@@ -107,4 +107,4 @@ void Update () {
     }
 ```
 
-![MazeRobo facing towards us](images/step8_RoboFacingCamera.png)
+![MazeRobo die naar ons kijkt](images/step8_RoboFacingCamera.png)
