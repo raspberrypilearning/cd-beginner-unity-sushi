@@ -1,23 +1,23 @@
-## Give MazeRobo something to play with
+## Geef MazeRobo iets om mee te spelen
 
-Now that you've got your character and it's moving around properly, it's time to give it something to play with! You're going to add a ball for the MazeRobo to push around.
+Nu je je karakter hebt en het beweegt goed, is het tijd om het iets te geven om mee te spelen! Je gaat een bal toevoegen voor de MazeRobo om rond te duwen.
 
-+ Start by creating a **Sphere** (**GameObject > 3D Object > Sphere**). Rename it `Ball`.
++ Begin met het maken van een **Sphere (bol)**(**GameObject > 3D-object > Sphere**). Hernoem het `Ball`.
 
-+ Set the **Transform Position** property of `Ball` to:
++ Stel de **Transform Position** eigenschap van `Ball` in op:
 ```
   X: 0
-  Y: 1
-  Z: 2
+Y: 1
+Z: 2
 ```
-+ Make another material (see the **Add colour** step if you don't remember how!) and make it green. Call it `BallGreen` and drag it onto `Ball`!
++ Maak een ander materiaal (zie de **Kleur toevoegen** stap als je niet meer weet hoe!) en maak het groen. Noem het `BallGreen` en sleep het naar `Ball`!
 
-![The sphere and the green material](images/step10_AddGreenBall.png)
+![De bol en het groene materiaal](images/step10_AddGreenBall.png)
 
-If you test the game now and walk MazeRobo into the sphere, you'll notice it behaves just like the wall: it doesn't move. You want the sphere to be a rolling ball though, so you'll need to give it some rules for moving, like MazeRobo has.
+Als je het spel nu test en MazeRobo de bol in laat lopen, zul je merken dat het zich net als de muur gedraagt: het beweegt niet. Je wilt echter dat de bol een rollende bal is, dus je moet hem een aantal regels geven om te bewegen, zoals MazeRobo heeft.
 
-+ Select `Ball` and give it a **Rigidbody** component (**Component > Physics > Rigidbody**).
++ Selecteer `Ball` en geef het een **Rigidbody** component (**Component > Physics > Rigidbody**).
 
-+ Now try playing!
++ Probeer nu te spelen!
 
-![Gameplay now with a ball that rolls](images/step10_RollingBall.png)
+![Gameplay nu met een bal die rolt](images/step10_RollingBall.png)
