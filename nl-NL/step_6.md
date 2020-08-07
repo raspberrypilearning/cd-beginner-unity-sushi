@@ -1,16 +1,16 @@
-## Make MazeRobo move
+## Laat MazeRobo bewegen
 
-Time to write some code so that the player of your game can control MazeRobo!
+Tijd om wat code te schrijven zodat de speler van je spel MazeRobo kan besturen!
 
-+ Go to the Project pane and create a new folder \(**Assets &gt; Create &gt; Folder**\) inside the `Assets` folder \(you may need to click on the `Assets` folder first\). Call the new folder `Scripts`.
++ Ga naar het projectpaneel en maak een nieuwe map \(**Assets &gt; Create &gt; Folder**\) binnen de `Assets` map \(mogelijk moet je eerst op de `Assets` map klikken\). Noem de nieuwe map `Scripts`.
 
 ![](images/step7_ScriptsFolder.png)
 
-+ Create a new C\# script \(**Assets &gt; Create &gt;  C\# Script**\) in this folder, and call it `RoboMover`.
++ Maak een nieuw C\# script \(**Assets &gt; Create &gt;  C# Script**\) in deze map en noem het `RoboMover`.
 
-![The RoboMover script inside the Scripts folder](images/step7_NewScript.png)
+![Het RoboMover-script in de map Scripts](images/step7_NewScript.png)
 
-+ Double-click on `RoboMover` to open it in an editor (which is a separate program from Unity). You should see code like this:
++ Dubbelklik op `RoboMover` om het te openen in een editor (wat een apart programma is van Unity). Het zou er zo moeten uitzien:
 
 ```cs
 using System.Collections;
@@ -33,17 +33,17 @@ public class RoboMover : MonoBehaviour {
 
 --- collapse ---
 ---
-title: Understanding the code
+title: De code begrijpen
 ---
-Let's look at what you've got here. You can ignore the first three lines. They're just the program setting up things it needs. Then you've got this:
+Laten we eens kijken wat je hier hebt. Je kunt de eerste drie regels negeren. Ze zijn slechts dingen die het programma instelt die het nodig heeft. Dan heb je dit:
 
 ```cs
 public class RoboMover : MonoBehaviour {
 ```
 
-This is the start of a **class** \(a blueprint of code\) called `RoboMover`. Don't worry about the `: MonoBehaviour` bit right now. Everything between this first `{` and the last `}` is inside the `RoboMover` class.
+Dit is het begin van een **class** \(een blauwdruk van code\) genaamd `RoboMover`. Maak je geen zorgen over de `: MonoBehaviour `. Alles tussen deze eerste `{` en de laatste `}` zit in de `RoboMover` class.
 
-Then below that, you have two **function declarations** for **functions** named `Start` and `Update`. A function declaration is where a function gets defined in your code. Right now, the functions are both empty and the only difference between them is their names, so let's just look at one quickly:
+Daarna heb je twee **declaraties van functies** voor de **functie ** genaamd `Start` en `Update`. Een functie declaratie is waar een functie wordt gedefinieerd in je code. Op dit moment zijn de functies leeg en het enige verschil is de naam, dus laten we er snel een bekijken:
 
 ```cs
 void Update() {
@@ -51,24 +51,24 @@ void Update() {
 }
 ```
 
-A function is a set of instructions for a computer to do something, wrapped up with a label for the task that makes it easy to remember. For example, for a human, "Make me a cup of tea" is a function. We know there are lots of steps to it and, at the end, you have a cup of tea. It would be silly to have to tell someone every step every time you wanted them to make you some tea. The same is true of asking the computer to do something. Much easier to teach it once, in one place, and then get it to do it over and over again just by using the label of the function!
+Een functie is een set instructies voor een computer om iets te doen, verpakt met een label voor de taak die het gemakkelijk te onthouden maakt. Voor een mens is bijvoorbeeld 'Maak een kopje thee voor mij' een functie. We weten dat er veel stappen voor nodig zijn en aan het einde heb je een kopje thee. Het zou dwaas zijn om elke keer dat je wilde dat iemand thee voor je maakte elke stap aan die persoon te vertellen. Hetzelfde geldt voor de computer vragen om iets te doen. Veel gemakkelijker is het om het één keer te leren, op één plek, en het dan steeds opnieuw te laten doen door gewoon het label van de functie te gebruiken!
 
-The first word in these function declarations here is `void`. That shows you that the functions don't **return** anything. That means they give nothing back at the end of running. For example, the human function "Make me a cup of tea" returns a cup of tea once all the instructions are done, but "Add milk" doesn't return anything, it just changes the cup of tea that already exists. So "Add milk" would be a `void` function!
+Het eerste woord in deze functie declaraties hier is `void` (leeg). Dat laat zien dat de functies niets **terug geven (return)**. Dat betekent dat ze aan het einde van het uitvoeren niets teruggeven. De menselijke functie 'Maak een kopje thee voor mij' levert bijvoorbeeld een kopje thee op als alle instructies zijn voltooid, maar 'Melk toevoegen' geeft niets terug, het verandert alleen de reeds bestaande kop thee. Dus "Melk toevoegen" zou een `void` functie zijn!
 
-Next comes the name of the **function**, that easy label you can use to **call** the function from elsewhere in your code to use it. Notice the round brackets `()` beside the name. They're empty now, but they can be used to **pass** information into the function. For example: "Make me a cup of tea \(two sugars\)".
+Vervolgens komt de naam van de **functie**, dat gemakkelijke label dat je kunt gebruiken om deze **aan te roepen(call) ** van ergens anders in je code om deze te gebruiken. Let op de ronde haakjes `()` naast de naam. Ze zijn nu leeg, maar ze kunnen worden gebruikt om informatie **door te geven** naar de functie. Bijvoorbeeld: "Maak een kopje thee \(twee suikerklontjes\)".
 
-Finally, you have the curly brackets `{}`. Everything inside them is the set of instructions the program will follow when the **function** is called. For "Make me a cup of tea" that would be things like:
+Op het eind heb je de accolades `{}`. Alles wat er binnen staat is de set aan instructies die het programma zal volgen wanneer de **functie** wordt aangeroepen. Voor "Maak een kopje thee voor mij" zou dat zijn:
 
-* Boil water
-* Put water in teapot
-* Add teabag
-* ...and so on
+* Water koken
+* Doe water in theepot
+* Voeg theezakje toe
+* ...enzovoort
 
 --- /collapse ---
 
-Now that you've got some code to work with, it's time to start adding to it!
+Nu je wat code hebt om mee te werken, is het tijd om iets eraan toe te voegen!
 
-+ First, you need to add some **variables**, inside the class but before the functions, like this:
++ Eerst moet je enkele **variabelen** toevoegen, binnen de class maar vóór de functies, zoals dit:
 
 ```cs
 public class RoboMover : MonoBehaviour {
@@ -83,18 +83,18 @@ public class RoboMover : MonoBehaviour {
 
 --- collapse ---
 ---
-title: What does the new code do?
+title: Wat doet de nieuwe code?
 ---
 
-These variables are labels on values, or things. In this case we've got:
+Deze variabelen zijn labels op waarden of dingen. In dit geval hebben we:
 
-   * `moveSpeed` — a float \(decimal\) number, in this case `4.0`
-   * `rb` — a variable you'll use to refer to the **Rigidbody** component \(which is MazeRobo itself, remember?\)
-   * `tf` — a variable you'll use to refer to the **Transform** component
+   * `moveSpee ` — een float \(decimaal\) getal (drijvende komma getal), in dit geval `4.0`
+   * `rb` — een variabele die je gebruikt om naar de **Rigidbody** component te verwijzen \(en dat is MazeRobo zelf, weet je nog?\)
+   * `tf` — een variabele die je gebruikt om te verwijzen naar de **Transform** component
 
 --- /collapse ---
 
-+ You don't actually need the `Start` function in this program, so you can delete these lines:
++ Je hebt de `Start` functie niet echt nodig in dit programma, dus je kunt deze regels verwijderen:
 
 ```cs
 // Use this for initialization
@@ -103,7 +103,7 @@ void Start () {
 }
 ```
 
-+ Now you need to fill in the `Update` function with this code:
++ Nu moet je de `Update` functie vullen met deze code:
 
 ```cs
 // Update is called once per frame
@@ -117,39 +117,39 @@ void Update () {
 
 --- collapse ---
 ---
-title: What does the new code do?
+title: Wat doet de nieuwe code?
 ---
 
-The first line of the function creates `desiredDirection`, which is a  set of three coordinates. Two of them are taken from `Input`, which is the direction the game receives from the player. The last is the depth of the character, which you're not changing, so it's set to `0.0`.
+De eerste regel van de functie creëert `desiredDirection`, dat is een set van drie coördinaten die de gewenste richting bepaald. Twee ervan zijn afkomstig van `Input`, wat de richting is die het spel van de speler ontvangt. De laatste is de diepte van het personage, die je niet verandert, dus het is ingesteld op `0.0`.
 
-You then multiply the `desiredDirection` by `moveSpeed`, the variable you set earlier that controls the speed at which MazeRobo moves.
+Vervolgens vermenigvuldig je de `desiredDirection` met `moveSpeed`, de variabele die je eerder hebt ingesteld en die de snelheid regelt waarmee MazeRobo beweegt.
 
-Next, you multiply `desiredDirection` again by `Time.deltaTime`, which is the amount of time since the last time `Update` ran. This means the direction changes correctly no matter the type of computer your game runs on.
+Vervolgens vermenigvuldig je `desiredDirection` opnieuw met`Time.deltaTime`, dit is de hoeveelheid tijd die verlopen is sinds de laatste keer dat `Update` uitgevoerd werd. Dit betekent dat de richting correct verandert, ongeacht het type computer waarop je game draait.
 
-Finally, you change the position of the **Rigidbody** `rb`(that's MazeRobo) by the amount you've calculated and stored in `desiredDirection`.
+Ten slotte verander je de positie van de **Rigidbody** `rb` (dat is MazeRobo) met het getal dat je hebt berekend en opgeslagen in `desiredDirection`.
 
-What all this adds up to is that, every time the screen is updated, the character moves a tiny bit in the direction the player is sending it with the controls.
+Dit alles komt erop neer dat, telkens wanneer het scherm wordt bijgewerkt, het personage een klein beetje beweegt in de richting waarin de speler het stuurt met de bedieningselementen.
 
 --- /collapse ---
 
-+ Be sure to save your code (**File > Save**).
++ Zorg ervoor dat je je code opslaat (**File > Save**).
 
-That should do it! You're close to getting MazeRobo moving now!
+Dat zou het moeten zijn! Je bent nu bijna klaar om MazeRobo in beweging te krijgen!
 
-+ Back in Unity, drag and drop your `RoboMover` script from the `Scripts` folder and onto the `MazeRobo` **GameObject** in the **Hierarchy**.
++ Terug in Unity, sleep je `RoboMover` script uit de `Scripts` map naar het `MazeRobo` **GameObject** in de **Hierarchy**.
 
-![Drag the script onto MazeRobo](images/step7_dragScript.png)
+![Sleep het script naar MazeRobo](images/step7_dragScript.png)
 
-+ You'll see that a field for the script is now visible in MazeRobo’s Inspector, below **Rigidbody**.
++ Je zult zien dat een veld voor het script nu zichtbaar is in MazeRobo's Inspector, onder **Rigidbody**.
 
-![The script appears in the inspector for MazeRobo](images/MazeRobo_Inspector.png)
+![Het script verschijnt in de inspector voor MazeRobo](images/MazeRobo_Inspector.png)
 
-+ There are two empty fields in the `RoboMover` field:`rb` and `tf`. As you know, these stand for **Rigidbody** and **Transform**, and if you click and drag the names of these components from their places in the Inspector and into their respective fields, `RoboMover` \(the script\) will have all the info it needs to move MazeRobo!
++ Er zijn twee lege velden in de `RoboMover` sectie: `rb` en `tf`. Zoals je weet, staan deze voor **Rigidbody** en **Transform**, en als je de namen van deze componenten klikt en sleept van hun plaatsen in de Inspector naar hun respectievelijke velden, dan heeft `RoboMover` \(het script\) alle informatie die nodig is om MazeRobo te verplaatsen!
 
-![Drag the names onto the script](images/step7_DragOntoScript.png) ![The Rb and Tf variables now have the values of Rigidbody and Transform](images/Script_Vars.png)
+![Sleep de namen naar het script](images/step7_DragOntoScript.png) ![De variabelen Rb en Tf hebben nu de waarden van Rigidbody en Transform](images/Script_Vars.png)
 
-+ Now click on the big **Play** button at the top centre of the Unity interface...
++ Klik nu op de grote **Play** knop bovenaan in het midden van de Unity-interface...
 
-MazeRobo moves!
+MazeRobo beweegt!
 
-+ Use the arrow keys to control MazeRobo. When you're done, press the **Play** button again to stop the game.
++ Gebruik de pijltjestoetsen om MazeRobo te besturen. Als je klaar bent, druk je opnieuw op de knop **Play** om het spel te stoppen.
