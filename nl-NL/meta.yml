@@ -1,7 +1,7 @@
 ---
 title: A-mazing robot
-hero_image: afbeeldingen / banner.png
-description: Maak je eerste spel met het ontwikkel platform Unity
+hero_image: images/banner.png
+description: Maak je eerste spel met het ontwikkelplatform Unity
 version: 4.0.0
 listed: true
 copyedit: true
@@ -25,7 +25,7 @@ steps:
   - 
     title: Laat MazeRobo bewegen
   - 
-    title: Maak de beweging van de robot
+    title: Goed bewegen
   - 
     title: Automatisch volgen van de camera
   - 
