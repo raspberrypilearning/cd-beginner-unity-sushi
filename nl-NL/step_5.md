@@ -25,7 +25,7 @@ Z = 0
 
 Nu voeg je een muur toe om je doolhof te starten!
 
-+ Maak een Cube (**GameObject > 3D Object > Cube **) en stel de **Transform Position** in op:
++ Maak een Cube (**GameObject > 3D Object > Cube**) en stel de **Transform Position** in op:
 ```
 X = -2
 Y = 1.5

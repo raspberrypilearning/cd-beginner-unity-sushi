@@ -51,4 +51,4 @@ title: Hoe Unity te verkrijgen
 
 Als je dit project wilt afdrukken, gebruik dan de [printervriendelijke versie](https://projects.raspberrypi.org/nl-NL/projects/project-name/print){:target="_blank"}.
 
-Gebruik de link in de voettekst voor toegang tot de GitHub repository voor dit project, met daarin alle bronnen (inclusief een voorbeeld van een voltooid project) in de map 'nl/resources'.
+Gebruik de link in de voettekst voor toegang tot de GitHub repository voor dit project, met daarin alle bronnen (inclusief een voorbeeld van een voltooid project) in de map 'nl-NL/resources'.
