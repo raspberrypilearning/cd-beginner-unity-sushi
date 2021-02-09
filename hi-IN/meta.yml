@@ -1,0 +1,24 @@
+---
+title: भूलभुलैया वाला रोबोट
+hero_image: images/banner.png
+description: यूनिटी खेल विकास मंच के साथ अपना पहला गेम बनाएं
+version: 4.0.0
+listed: true
+copyedit: true
+curriculum: 1, design-0, programming-1, phys-comp-0, manufacture-0, community-0
+interests: games
+technologies: unity
+site_areas: coderdojo
+software: unity
+last_tested: "2018-07-12"
+steps:
+  - title: परिचय
+  - title: मंच तैयार करें
+  - title: एक रोबोट बनाओ
+  - title: रंग जोड़ें
+  - title: "दुनिया की ज़मीन बनाओ"
+  - title: MazeRobo चलाओ
+  - title: ठीक से चलना
+  - title: कैमरा ट्रैकिंग
+  - title: MazeRobo को साथ खेलने के लिए कुछ दे
+  - title: जीतना!
