@@ -10,15 +10,17 @@ interests: games
 technologies: unity
 site_areas: coderdojo
 software: unity
-last_tested: "2018-07-12"
+last_tested: '2018-07-12'
 steps:
-  - title: परिचय
-  - title: मंच तैयार करें
-  - title: एक रोबोट बनाओ
-  - title: रंग जोड़ें
-  - title: "दुनिया की ज़मीन बनाओ"
-  - title: MazeRobo चलाओ
-  - title: ठीक से चलना
-  - title: कैमरा ट्रैकिंग
-  - title: MazeRobo को साथ खेलने के लिए कुछ दे
-  - title: जीतना!
+- title: परिचय
+  completion: engaged
+- title: मंच तैयार करें
+- title: एक रोबोट बनाओ
+- title: रंग जोड़ें
+- title: दुनिया की ज़मीन बनाओ
+- title: MazeRobo चलाओ
+- title: ठीक से चलना
+- title: कैमरा ट्रैकिंग
+- title: MazeRobo को साथ खेलने के लिए कुछ दे
+  completion: internal
+- title: जीतना!

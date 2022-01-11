@@ -10,15 +10,17 @@ interests: games
 technologies: unity
 site_areas: coderdojo
 software: unity
-last_tested: "2018-07-12"
+last_tested: '2018-07-12'
 steps:
-  - title: Inleiding
-  - title: Maak het speelveld
-  - title: Maak een robot
-  - title: Voeg een kleur toe
-  - title: "Maak de grond van je spelwereld"
-  - title: Laat MazeRobo bewegen
-  - title: Goed bewegen
-  - title: Automatisch volgen van de camera
-  - title: Geef MazeRobo iets om mee te spelen
-  - title: Winnen!
+- title: Inleiding
+  completion: engaged
+- title: Maak het speelveld
+- title: Maak een robot
+- title: Voeg een kleur toe
+- title: Maak de grond van je spelwereld
+- title: Laat MazeRobo bewegen
+- title: Goed bewegen
+- title: Automatisch volgen van de camera
+- title: Geef MazeRobo iets om mee te spelen
+  completion: internal
+- title: Winnen!
