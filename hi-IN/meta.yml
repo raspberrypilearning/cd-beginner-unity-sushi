@@ -13,14 +13,16 @@ software: unity
 last_tested: '2018-07-12'
 steps:
 - title: परिचय
-  completion: engaged
 - title: मंच तैयार करें
 - title: एक रोबोट बनाओ
+  completion:
+  - engaged
 - title: रंग जोड़ें
 - title: दुनिया की ज़मीन बनाओ
 - title: MazeRobo चलाओ
 - title: ठीक से चलना
 - title: कैमरा ट्रैकिंग
 - title: MazeRobo को साथ खेलने के लिए कुछ दे
-  completion: internal
 - title: जीतना!
+  completion:
+  - internal

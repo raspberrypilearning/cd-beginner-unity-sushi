@@ -1,3 +1,4 @@
+---
 title: Robot maze
 hero_image: images/banner.png
 description: Make a robot maze game with the Unity development platform
@@ -12,14 +13,16 @@ software: unity
 last_tested: '2018-07-12'
 steps:
 - title: Introduction
-  completion: engaged
 - title: Set the stage
 - title: Make a robot
+  completion:
+  - engaged
 - title: Add colour
 - title: Make the world's ground
 - title: Make MazeRobo move
 - title: Moving properly
 - title: Camera tracking
 - title: Give MazeRobo something to play with
-  completion: internal
 - title: Winning!
+  completion:
+  - internal
