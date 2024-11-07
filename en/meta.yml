@@ -3,7 +3,7 @@ title: Robot maze
 hero_image: images/banner.png
 description: Make a robot maze game with the Unity development platform
 version: 4.0.0
-listed: true
+listed: false
 copyedit: true
 curriculum: 1, design-0, programming-1, phys-comp-0, manufacture-0, community-0
 interests: games
